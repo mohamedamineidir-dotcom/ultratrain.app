@@ -3,1147 +3,708 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UltraTrain — Ultra Trail &amp; Ultra Marathon Training Plans</title>
-    <meta name="description" content="UltraTrain: the ultra running training plan app with personalized ultra trail &amp; ultra marathon plans, live finish-time predictions, and race-day nutrition.">
-    <meta name="theme-color" content="#0D0B2E">
+    <title>UltraTrain: ultra trail training plans and a rank that shows your real level</title>
+    <meta name="description" content="UltraTrain 2.0 is the ultra running coach app for iPhone: a training plan built backwards from your race, a rank from Bronze to Ultra Legend, a player card, and share overlays for your runs.">
+    <meta name="theme-color" content="#070D1A">
+    <meta name="apple-itunes-app" content="app-id=6759983118">
     <link rel="icon" type="image/png" sizes="64x64" href="assets/app-icon.png">
     <link rel="apple-touch-icon" href="assets/app-icon-large.png">
-    <link rel="canonical" href="https://ultratrain.app">
-    <meta property="og:title" content="UltraTrain — Ultra Trail &amp; Ultra Marathon Training Plans">
-    <meta property="og:description" content="Personalized ultra trail and ultra marathon training plans, live finish-time predictions, and race-day nutrition, built for ultra running.">
-    <meta property="og:image" content="https://ultratrain.app/assets/app-icon-large.png">
-    <meta property="og:url" content="https://ultratrain.app">
+    <link rel="canonical" href="https://ultratrain.app/">
+    <link rel="alternate" hreflang="en" href="https://ultratrain.app/">
+    <link rel="alternate" hreflang="fr" href="https://ultratrain.app/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://ultratrain.app/">
+    <meta property="og:title" content="UltraTrain: train for your next ultra. Earn your real rank.">
+    <meta property="og:description" content="A coach for ultra runners and a rank from Bronze to Ultra Legend. Plans from 50K to 100 miles and backyard, synced with Apple Health and Strava.">
+    <meta property="og:image" content="https://ultratrain.app/assets/og/og-home-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://ultratrain.app/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="UltraTrain">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="UltraTrain — Ultra Trail &amp; Ultra Marathon Training Plans">
-    <meta name="twitter:description" content="Personalized ultra trail and ultra marathon training plans, live finish-time predictions, and race-day nutrition, built for ultra running.">
-    <meta name="twitter:image" content="https://ultratrain.app/assets/app-icon-large.png">
+    <meta name="twitter:title" content="UltraTrain: train for your next ultra. Earn your real rank.">
+    <meta name="twitter:description" content="A coach for ultra runners and a rank from Bronze to Ultra Legend. Plans from 50K to 100 miles and backyard, synced with Apple Health and Strava.">
+    <meta name="twitter:image" content="https://ultratrain.app/assets/og/og-home-en.png">
+    <link rel="preload" href="assets/fonts/DMSans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/site.css">
+    <link rel="stylesheet" href="assets/home.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MobileApplication",
+          "@type": "SoftwareApplication",
           "name": "UltraTrain",
-          "url": "https://ultratrain.app",
-          "description": "UltraTrain is an ultra running training plan app: personalized ultra trail and ultra marathon training plans, live finish-time predictions, GPS run tracking, and race-day nutrition.",
+          "url": "https://ultratrain.app/",
+          "description": "Ultra running coach app: a training plan built backwards from your race, a universal rank from Bronze to Ultra Legend, a player card and share overlays. Plans from 50K to 100 miles and backyard formats.",
           "applicationCategory": "HealthApplication",
-          "operatingSystem": "iOS",
-          "image": "https://ultratrain.app/assets/app-icon-large.png",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "category": "Free with optional Premium subscription"
-          }
+          "operatingSystem": "iOS 17 or later",
+          "image": "https://ultratrain.app/assets/icon-512.png",
+          "installUrl": "https://apps.apple.com/app/ultratrain/id6759983118",
+          "inLanguage": ["en", "fr"],
+          "offers": [
+            { "@type": "Offer", "name": "Monthly", "price": "14.99", "priceCurrency": "EUR", "category": "subscription" },
+            { "@type": "Offer", "name": "Yearly", "price": "49.99", "priceCurrency": "EUR", "category": "subscription" }
+          ],
+          "publisher": { "@type": "Organization", "name": "UltraTrain", "url": "https://ultratrain.app/", "logo": "https://ultratrain.app/assets/icon-512.png" }
         },
         {
           "@type": "Organization",
           "name": "UltraTrain",
-          "url": "https://ultratrain.app",
-          "logo": "https://ultratrain.app/assets/app-icon-large.png"
+          "url": "https://ultratrain.app/",
+          "logo": "https://ultratrain.app/assets/icon-512.png",
+          "email": "support@ultratrain.app"
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is UltraTrain free?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. You can build a training plan and start using UltraTrain for free. A premium subscription unlocks unlimited custom race plans and the full feature set."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does it work with Apple Watch?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. UltraTrain includes a standalone Apple Watch app for GPS and heart rate tracking, plus home screen widgets and Live Activities during your runs."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is this only for trail and ultra races?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ultra trail and ultra marathon distances are what UltraTrain is built for, from your first 50K to multi-day races. Road distances from 5K to marathon are supported too."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How is my finish time calculated?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "UltraTrain converts your race's distance and elevation into an effort-adjusted distance, then projects your pace from your recent training and personal bests. You get three scenarios instead of one single guess."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does UltraTrain work without an internet connection?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Your training plan, run tracking, and nutrition strategy all work fully offline, which matters when you're deep in the mountains."
-              }
-            }
+            { "@type": "Question", "name": "How much does UltraTrain cost?", "acceptedAnswer": { "@type": "Answer", "text": "UltraTrain is a subscription bought in the app: 14.99 euros per month or 49.99 euros per year. There is no free tier. The whole app is unlocked from day one and you can cancel anytime from your App Store subscriptions." } },
+            { "@type": "Question", "name": "Which watches and apps sync with UltraTrain?", "acceptedAnswer": { "@type": "Answer", "text": "UltraTrain has its own Apple Watch app and reads your runs from Apple Health and Strava. Garmin, COROS and other watches come through Strava or Apple Health. Direct Garmin and COROS sync is not available yet." } },
+            { "@type": "Question", "name": "Is UltraTrain for beginners?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The My first ultra path builds you up from your current base to a 50K, 60K, 80K or 100K with safe minimum timelines, and the rank starts you where you really are. You can also pick Just build fitness with no race at all." } },
+            { "@type": "Question", "name": "Does it handle road, trail and backyard races?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Plans cover 5K to marathon on road or trail, ultras of any distance and elevation, backyard and elimination-laps formats, and a no-race fitness block. Elevation gain counts: every 100 m of climb adds a kilometre of effort." } },
+            { "@type": "Question", "name": "Can I cancel anytime?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cancel from Settings, your name, Subscriptions on your iPhone. You keep access until the end of the period you paid for." } }
           ]
         }
       ]
     }
     </script>
-    <style>
-        :root {
-            --bg-deep: #0D0B2E;
-            --bg-mid: #1A1145;
-            --bg-navy: #0A1628;
-            --coral: #FF6B6B;
-            --coral-deep: #EE5050;
-            --gold: #FFC83C;
-            --ink: #F5F6FA;
-            --ink-dim: #ABB0C8;
-            --ink-faint: #767ba0;
-            --paper: #FAFAFC;
-            --paper-card: #FFFFFF;
-            --paper-border: #E9E9F2;
-            --text-on-paper: #14142B;
-            --text-on-paper-dim: #61627A;
-            --radius-lg: 28px;
-            --radius-md: 18px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--ink);
-            background: var(--bg-deep);
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        img { max-width: 100%; display: block; }
-
-        .wrap {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-
-        /* ---------- Nav ---------- */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(13, 11, 46, 0.72);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            z-index: 100;
-        }
-
-        .nav-inner {
-            max-width: 1120px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-            padding: 0 1.5rem;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 800;
-            font-size: 1.0625rem;
-            color: var(--ink);
-            text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-
-        .nav-logo .glyph {
-            width: 26px;
-            height: 26px;
-            border-radius: 7px;
-            display: block;
-        }
-
-        .nav-links { display: flex; gap: 2rem; align-items: center; }
-
-        .nav-links a {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--ink-dim);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover { color: var(--ink); }
-
-        .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: linear-gradient(135deg, var(--coral), var(--coral-deep));
-            color: #fff;
-            padding: 0.5rem 1.15rem;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.8125rem;
-            white-space: nowrap;
-        }
-
-        @media (max-width: 760px) {
-            .nav-links a:not(.nav-cta) { display: none; }
-        }
-
-        /* ---------- Hero ---------- */
-        .hero {
-            position: relative;
-            padding: 9.5rem 1.5rem 2rem;
-            text-align: center;
-            background:
-                radial-gradient(ellipse 900px 500px at 50% -10%, rgba(255,107,107,0.16), transparent 60%),
-                linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 55%, var(--bg-navy) 100%);
-            overflow: hidden;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: rgba(255,107,107,0.12);
-            border: 1px solid rgba(255,107,107,0.35);
-            color: #FF9C9C;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 0.4rem 0.9rem;
-            border-radius: 100px;
-            margin-bottom: 1.75rem;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6.4vw, 4.25rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            margin-bottom: 1.25rem;
-            color: var(--ink);
-        }
-
-        .hero h1 .accent {
-            background: linear-gradient(135deg, var(--coral), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p.lede {
-            font-size: clamp(1.0625rem, 2.2vw, 1.1875rem);
-            color: var(--ink-dim);
-            max-width: 560px;
-            margin: 0 auto 2.25rem;
-        }
-
-        .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
-
-        .cta-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: linear-gradient(135deg, var(--coral), var(--coral-deep));
-            color: #fff;
-            padding: 0.95rem 1.9rem;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            box-shadow: 0 12px 30px -8px rgba(255,107,107,0.55);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .cta-primary:hover { transform: translateY(-1px); box-shadow: 0 16px 34px -8px rgba(255,107,107,0.65); }
-
-        .cta-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255,255,255,0.06);
-            color: var(--ink);
-            padding: 0.95rem 1.9rem;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            border: 1px solid rgba(255,255,255,0.14);
-            transition: background 0.2s;
-        }
-
-        .cta-secondary:hover { background: rgba(255,255,255,0.11); }
-
-        .reassurance {
-            font-size: 0.8125rem;
-            color: var(--ink-faint);
-            margin-bottom: 3.5rem;
-        }
-
-        /* ---------- Phone mockups ---------- */
-        /* Deliberately minimal, modeled directly on how Runna/Campus Coach
-           render device chrome: a simple dark frame with a thin, quiet
-           edge highlight, no shiny metallic gradient, no glass-reflection
-           overlay, nothing that competes with the screenshot. The
-           screenshots already contain a real Dynamic Island cutout from
-           the actual captured framebuffer, so the frame never draws its
-           own notch. */
-        .phone-frame {
-            position: relative;
-            width: 232px;
-            aspect-ratio: 1320 / 2868;
-            border-radius: 34px;
-            padding: 3px;
-            background: linear-gradient(165deg, #2c2c2e, #0a0a0a 40%);
-            box-shadow: 0 35px 70px -25px rgba(0,0,0,0.5);
-            flex-shrink: 0;
-        }
-
-        .phone-frame .bezel {
-            width: 100%;
-            height: 100%;
-            background: #000;
-            border-radius: 31px;
-            overflow: hidden;
-        }
-
-        .phone-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            border-radius: 31px;
-        }
-
-        /* Buttons are opt-in (.with-buttons only), thin and quiet, sitting
-           in the rim's own padding area outside the bezel. Restricted to
-           the three hero phones, everything below stays clean chrome only,
-           matching the reference sites exactly. */
-        .phone-frame .btn { display: none; }
-        .phone-frame.with-buttons .btn {
-            display: block;
-            position: absolute;
-            width: 2px;
-        }
-        .phone-frame.with-buttons .btn.action { left: -2px; top: 14%; height: 2%; background: #48484a; border-radius: 1px 0 0 1px; }
-        .phone-frame.with-buttons .btn.vol-up { left: -2px; top: 19%; height: 4.5%; background: #48484a; border-radius: 1px 0 0 1px; }
-        .phone-frame.with-buttons .btn.vol-down { left: -2px; top: 25%; height: 4.5%; background: #48484a; border-radius: 1px 0 0 1px; }
-        .phone-frame.with-buttons .btn.power { right: -2px; top: 20%; height: 6%; background: #48484a; border-radius: 0 1px 1px 0; }
-        .phone-frame.with-buttons .btn.camera { display: none; }
-
-        .hero-phones {
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            gap: -30px;
-            margin-top: 1rem;
-            padding-bottom: 1rem;
-        }
-
-        .hero-phones .phone-frame.side {
-            width: 188px;
-            opacity: 0.88;
-        }
-
-        .hero-phones .phone-frame.left { transform: rotate(-9deg) translate(22px, 14px); z-index: 1; }
-        .hero-phones .phone-frame.right { transform: rotate(9deg) translate(-22px, 14px); z-index: 1; }
-        .hero-phones .phone-frame.center { z-index: 2; }
-
-        @media (max-width: 640px) {
-            .hero-phones .phone-frame.side { width: 132px; }
-            .hero-phones .phone-frame.center { width: 172px; }
-            .hero-phones .phone-frame.left { transform: rotate(-10deg) translate(14px, 10px); }
-            .hero-phones .phone-frame.right { transform: rotate(10deg) translate(-14px, 10px); }
-        }
-
-        /* Two-phone "duo" composition for the finish-time + GPX pairing,
-           overlapping diagonally like Runna's calculator-flow phones. */
-        .duo-phones {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem 0;
-        }
-
-        .duo-phones .phone-frame.back {
-            width: 220px;
-            transform: translate(38px, -18px) rotate(-4deg);
-        }
-
-        .duo-phones .phone-frame.front {
-            width: 240px;
-            position: relative;
-            z-index: 1;
-            transform: translate(-38px, 24px) rotate(3deg);
-            box-shadow: 0 40px 80px -25px rgba(0,0,0,0.55);
-        }
-
-        @media (max-width: 640px) {
-            .duo-phones { padding: 1rem 0 2.5rem; }
-            .duo-phones .phone-frame.back { width: 168px; transform: translate(30px, -14px) rotate(-4deg); }
-            .duo-phones .phone-frame.front { width: 184px; transform: translate(-30px, 18px) rotate(3deg); }
-        }
-
-        /* ---------- Compat strip ---------- */
-        .compat {
-            background: var(--bg-navy);
-            padding: 2.25rem 1.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .compat-inner {
-            max-width: 1120px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .compat-label {
-            font-size: 0.6875rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink-faint);
-        }
-
-        .compat-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9375rem;
-            font-weight: 600;
-            color: var(--ink-dim);
-        }
-
-        /* ---------- Feature sections (light) ---------- */
-        .features {
-            background: var(--paper);
-            color: var(--text-on-paper);
-            padding: 6rem 0 2rem;
-        }
-
-        .feature-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            padding: 4rem 0;
-        }
-
-        .feature-row.reverse .feature-copy { order: 2; }
-        .feature-row.reverse .feature-visual { order: 1; }
-
-        .feature-eyebrow {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--coral-deep);
-            margin-bottom: 0.9rem;
-        }
-
-        .feature-copy h2 {
-            font-size: clamp(1.75rem, 3.2vw, 2.375rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            line-height: 1.15;
-            margin-bottom: 1rem;
-        }
-
-        .feature-copy p {
-            font-size: 1.0625rem;
-            color: var(--text-on-paper-dim);
-            max-width: 440px;
-        }
-
-        .feature-visual {
-            display: flex;
-            justify-content: center;
-        }
-
-        .feature-visual .phone-frame {
-            width: 260px;
-            box-shadow:
-                0 50px 80px -30px rgba(20,20,43,0.35),
-                0 0 0 1px rgba(20,20,43,0.06);
-        }
-
-        @media (max-width: 860px) {
-            .feature-row, .feature-row.reverse {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-                padding: 2.5rem 0;
-                text-align: center;
-            }
-            .feature-row.reverse .feature-copy,
-            .feature-row.reverse .feature-visual { order: initial; }
-            .feature-copy p { margin-left: auto; margin-right: auto; }
-        }
-
-        /* ---------- Stats band ---------- */
-        .stats {
-            background: linear-gradient(135deg, var(--bg-navy), var(--bg-deep));
-            padding: 4.5rem 1.5rem;
-        }
-
-        .stats-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2.5rem;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            margin-bottom: 0.35rem;
-            background: linear-gradient(135deg, var(--coral), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-item p { font-size: 0.9375rem; color: var(--ink-dim); }
-
-        /* ---------- How it works ---------- */
-        .how-it-works {
-            background: var(--paper);
-            color: var(--text-on-paper);
-            padding: 6rem 1.5rem;
-        }
-
-        .section-head { text-align: center; max-width: 620px; margin: 0 auto 3.5rem; }
-
-        .section-head h2 {
-            font-size: clamp(1.75rem, 3.6vw, 2.5rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.75rem;
-        }
-
-        .section-head p { color: var(--text-on-paper-dim); font-size: 1.0625rem; }
-
-        .steps-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .step-card {
-            background: var(--paper-card);
-            border: 1px solid var(--paper-border);
-            border-radius: var(--radius-md);
-            padding: 1.75rem 1.5rem;
-        }
-
-        .step-number {
-            width: 38px;
-            height: 38px;
-            border-radius: 11px;
-            background: linear-gradient(135deg, var(--coral), var(--coral-deep));
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .step-card h3 { font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .step-card p { font-size: 0.9375rem; color: var(--text-on-paper-dim); }
-
-        @media (max-width: 860px) {
-            .steps-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 520px) {
-            .steps-grid { grid-template-columns: 1fr; }
-        }
-
-        /* ---------- Pricing teaser ---------- */
-        .pricing {
-            background: var(--bg-deep);
-            padding: 6rem 1.5rem;
-            text-align: center;
-        }
-
-        .pricing-card {
-            max-width: 560px;
-            margin: 0 auto;
-            background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: var(--radius-lg);
-            padding: 3rem 2.5rem;
-        }
-
-        .pricing-card h3 {
-            font-size: 1.625rem;
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-        }
-
-        .pricing-card > p {
-            color: var(--ink-dim);
-            margin-bottom: 2rem;
-            font-size: 1.0625rem;
-        }
-
-        .pricing-list {
-            list-style: none;
-            text-align: left;
-            max-width: 380px;
-            margin: 0 auto 2.25rem;
-            display: grid;
-            gap: 0.85rem;
-        }
-
-        .pricing-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.7rem;
-            font-size: 0.9375rem;
-            color: var(--ink-dim);
-        }
-
-        .pricing-list li .tick {
-            flex-shrink: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: rgba(255,107,107,0.15);
-            color: var(--coral);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 800;
-            margin-top: 0.1rem;
-        }
-
-        .price-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.25rem;
-            max-width: 560px;
-            margin: 0 auto 2rem;
-        }
-
-        .price-card {
-            position: relative;
-            display: block;
-            background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: var(--radius-md);
-            padding: 1.75rem 1.25rem;
-            text-align: center;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .price-card:hover {
-            transform: translateY(-2px);
-            border-color: rgba(255,107,107,0.5);
-        }
-
-        .price-card.yearly {
-            border-color: rgba(255,107,107,0.4);
-            background: linear-gradient(160deg, rgba(255,107,107,0.14), rgba(255,255,255,0.02));
-        }
-
-        .price-card .price-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--ink-faint);
-            margin-bottom: 0.75rem;
-        }
-
-        .price-card .price-amount {
-            font-size: 2.25rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: var(--ink);
-        }
-
-        .price-card .price-amount span {
-            font-size: 0.9375rem;
-            font-weight: 500;
-            color: var(--ink-dim);
-        }
-
-        .price-card .price-strike {
-            font-size: 0.875rem;
-            color: var(--ink-faint);
-            text-decoration: line-through;
-            margin-top: 0.4rem;
-        }
-
-        .price-card .price-save {
-            display: inline-block;
-            margin-top: 0.6rem;
-            background: rgba(255,107,107,0.15);
-            color: #FF9C9C;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.25rem 0.65rem;
-            border-radius: 100px;
-        }
-
-        .pricing-web-note {
-            max-width: 480px;
-            margin: 0 auto 2.25rem;
-            font-size: 0.9375rem;
-            color: var(--ink-dim);
-        }
-
-        .pricing-web-note strong { color: var(--ink); }
-
-        @media (max-width: 520px) {
-            .price-cards { grid-template-columns: 1fr; max-width: 280px; }
-        }
-
-        /* ---------- FAQ ---------- */
-        .faq {
-            background: var(--paper);
-            color: var(--text-on-paper);
-            padding: 6rem 1.5rem;
-        }
-
-        .faq-list { max-width: 720px; margin: 0 auto; }
-
-        .faq-item {
-            border-bottom: 1px solid var(--paper-border);
-            padding: 1.5rem 0;
-        }
-
-        .faq-item summary {
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.0625rem;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .faq-item summary::-webkit-details-marker { display: none; }
-
-        .faq-item summary::after {
-            content: '+';
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--text-on-paper-dim);
-            transition: transform 0.2s;
-            flex-shrink: 0;
-        }
-
-        .faq-item[open] summary::after { transform: rotate(45deg); }
-
-        .faq-item p {
-            margin-top: 0.9rem;
-            color: var(--text-on-paper-dim);
-            font-size: 0.9688rem;
-            max-width: 620px;
-        }
-
-        /* ---------- Closing CTA ---------- */
-        .closing {
-            position: relative;
-            background:
-                radial-gradient(ellipse 800px 400px at 50% 110%, rgba(255,107,107,0.18), transparent 60%),
-                linear-gradient(180deg, var(--bg-navy), var(--bg-deep));
-            padding: 6.5rem 1.5rem;
-            text-align: center;
-        }
-
-        .closing h2 {
-            font-size: clamp(2rem, 4.5vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 1rem;
-        }
-
-        .closing p {
-            color: var(--ink-dim);
-            font-size: 1.0625rem;
-            max-width: 480px;
-            margin: 0 auto 2.25rem;
-        }
-
-        /* ---------- Footer ---------- */
-        footer {
-            background: var(--bg-navy);
-            padding: 4rem 1.5rem 2.5rem;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .footer-top {
-            max-width: 1120px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 3rem;
-            flex-wrap: wrap;
-            padding-bottom: 3rem;
-        }
-
-        .footer-brand .nav-logo { margin-bottom: 0.85rem; }
-
-        .footer-brand p {
-            color: var(--ink-faint);
-            font-size: 0.875rem;
-            max-width: 260px;
-        }
-
-        .footer-cols { display: flex; gap: 3.5rem; flex-wrap: wrap; }
-
-        .footer-col h4 {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--ink-faint);
-            margin-bottom: 1rem;
-        }
-
-        .footer-col a {
-            display: block;
-            color: var(--ink-dim);
-            text-decoration: none;
-            font-size: 0.9375rem;
-            margin-bottom: 0.7rem;
-            transition: color 0.2s;
-        }
-
-        .footer-col a:hover { color: var(--ink); }
-
-        .footer-bottom {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            color: var(--ink-faint);
-            font-size: 0.8125rem;
-        }
-
-        @media (max-width: 640px) {
-            .hero { padding-top: 7.5rem; }
-            .footer-cols { gap: 2rem; }
-        }
-    </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
+<header class="nav">
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo"><img class="glyph" src="assets/app-icon.png" alt=""> UltraTrain</a>
-        <div class="nav-links">
+        <a class="brand" href="/" aria-label="UltraTrain home"><img src="assets/app-icon.png" width="30" height="30" alt="">UltraTrain</a>
+        <nav class="nav-links" aria-label="Primary">
             <a href="#features">Features</a>
-            <a href="ultra-trail-training-plan.html">Training Plans</a>
-            <a href="#pricing">Pricing</a>
-            <a href="support.html">Support</a>
-            <a href="https://apps.apple.com/app/ultratrain/id6759983118" class="nav-cta">Download</a>
+            <a href="#rank">Rank</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <div class="lang" aria-label="Language">
+            <span aria-current="true" lang="en">EN</span>
+            <a href="/fr/" lang="fr" hreflang="fr">FR</a>
         </div>
-    </div>
-</nav>
-
-<section class="hero">
-    <span class="eyebrow">Built for ultra trail &amp; ultra marathon running</span>
-    <h1>Smarter training<br>for your <span class="accent">ultra trail.</span></h1>
-    <p class="lede">The training companion for ultra running: personalized ultra trail and ultra marathon training plans, race-day nutrition, and finish-time predictions that adapt every time you train.</p>
-    <div class="cta-group">
-        <a href="https://apps.apple.com/app/ultratrain/id6759983118" class="cta-primary">
-            <svg width="18" height="18" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            Download on the App Store
+        <a class="btn btn-primary btn-sm nav-cta" href="https://apps.apple.com/app/ultratrain/id6759983118">Download on the App Store</a>
+        <a class="nav-store-icon" href="https://apps.apple.com/app/ultratrain/id6759983118" aria-label="Download on the App Store">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.7c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.14-2.52.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.74-4.14zM13.8 5.06c.71-.87 1.2-2.07 1.07-3.27-1.03.04-2.28.69-3.02 1.55-.66.77-1.24 1.99-1.09 3.17 1.15.09 2.33-.58 3.04-1.45z"/></svg>
         </a>
-        <a href="#features" class="cta-secondary">See how it works</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
     </div>
-    <p class="reassurance">Free to start · iPhone &amp; Apple Watch</p>
+    <div class="nav-menu" id="menu" data-open="false">
+        <a href="#features">Features</a>
+        <a href="#rank">Rank</a>
+        <a href="#faq">FAQ</a>
+        <a href="support.html">Support</a>
+        <a class="btn btn-primary" href="https://apps.apple.com/app/ultratrain/id6759983118">Download on the App Store</a>
+    </div>
+</header>
 
-    <div class="hero-phones">
-        <div class="phone-frame side left with-buttons">
-            <span class="btn action"></span>
-            <span class="btn vol-up"></span>
-            <span class="btn vol-down"></span>
-            <span class="btn power"></span>
-            <span class="btn camera"></span>
-            <div class="bezel">
-                <img src="assets/screens/plan.jpg" alt="UltraTrain training plan screen showing a 24-week periodized plan">
+<main id="main">
+
+    <!-- 1. Hero. The first screen is plain HTML and CSS: it renders before any script loads. -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="container hero-top">
+            <p class="eyebrow">UltraTrain 2.0 for iPhone and Apple Watch</p>
+            <h1 id="hero-title">Train for your next ultra. <span class="line2">Earn your real rank.</span></h1>
+            <p class="lead">Ultra, your coach, builds your plan backwards from race day, adapts it every week, and ranks you on one scale from Bronze to Ultra Legend.</p>
+            <div class="hero-actions">
+                <a class="app-store" href="https://apps.apple.com/app/ultratrain/id6759983118"><img src="assets/img/app-store-badge-en.svg" width="150" height="50" alt="Download on the App Store"></a>
+                <ul class="chips" aria-label="Key facts">
+                    <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 20 10 7l4 7 2-3 5 9Z"/></svg>50K to 100 miles and backyard plans</li>
+                    <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.2 5M4 12a8 8 0 0 1 14.2-5M18 3v4h-4M6 21v-4h4"/></svg>Syncs with Apple Health and Strava</li>
+                    <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>English and French</li>
+                </ul>
             </div>
         </div>
-        <div class="phone-frame center with-buttons">
-            <span class="btn action"></span>
-            <span class="btn vol-up"></span>
-            <span class="btn vol-down"></span>
-            <span class="btn power"></span>
-            <span class="btn camera"></span>
-            <div class="bezel">
-                <img src="assets/screens/dashboard.jpg" alt="UltraTrain dashboard showing race countdown and today's session">
-            </div>
-        </div>
-        <div class="phone-frame side right with-buttons">
-            <span class="btn action"></span>
-            <span class="btn vol-up"></span>
-            <span class="btn vol-down"></span>
-            <span class="btn power"></span>
-            <span class="btn camera"></span>
-            <div class="bezel">
-                <img src="assets/screens/finishtime.jpg" alt="UltraTrain finish-time prediction chart evolving over the training block">
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="compat">
-    <div class="compat-inner">
-        <span class="compat-label">Works with</span>
-        <span class="compat-badge">⌚︎ Apple Watch</span>
-        <span class="compat-badge">❤️ Apple Health</span>
-        <span class="compat-badge">📍 GPS Tracking</span>
-    </div>
-</div>
-
-<section class="features" id="features">
-    <div class="wrap">
-
-        <div class="feature-row">
-            <div class="feature-copy">
-                <span class="feature-eyebrow">Personalized plans</span>
-                <h2>An ultra trail training plan that evolves with you</h2>
-                <p>Built from your race date backwards through base, build, peak, and taper. It adjusts automatically for missed sessions, changing fitness, and every race you add to your calendar.</p>
-            </div>
-            <div class="feature-visual">
-                <div class="phone-frame">
-                    <div class="bezel">
-                        <img src="assets/screens/plan.jpg" alt="UltraTrain weekly training plan with session list and coach note">
+        <div class="hero-stage" data-hero>
+            <div class="container hero-scene">
+                <div class="hero-halo" aria-hidden="true"></div>
+                <div class="phone hero-phone">
+                    <div class="screens">
+                        <picture class="screen is-active" data-screen="0">
+                            <source type="image/webp" srcset="assets/img/screens/home2-390.webp 390w, assets/img/screens/home2-780.webp 780w" sizes="300px">
+                            <img src="assets/img/screens/home2-780.png" srcset="assets/img/screens/home2-390.png 390w, assets/img/screens/home2-780.png 780w" sizes="300px" width="780" height="1688" alt="UltraTrain home screen: rank and streak, a race countdown with a predicted finish, this week and today's session" fetchpriority="high">
+                        </picture>
+                        <picture class="screen" data-screen="1">
+                            <source type="image/webp" srcset="assets/img/screens/plan2-390.webp 390w, assets/img/screens/plan2-780.webp 780w" sizes="300px">
+                            <img src="assets/img/screens/plan2-780.png" srcset="assets/img/screens/plan2-390.png 390w, assets/img/screens/plan2-780.png 780w" sizes="300px" width="780" height="1688" alt="The Plan tab: the current week with its sessions and the phases up to race day" loading="lazy">
+                        </picture>
+                        <picture class="screen" data-screen="2">
+                            <source type="image/webp" srcset="assets/img/screens/run2-390.webp 390w, assets/img/screens/run2-780.webp 780w" sizes="300px">
+                            <img src="assets/img/screens/run2-780.png" srcset="assets/img/screens/run2-390.png 390w, assets/img/screens/run2-780.png 780w" sizes="300px" width="780" height="1688" alt="The Run tab: today's session ready to start, with live pace, distance and elevation" loading="lazy">
+                        </picture>
+                        <picture class="screen" data-screen="3">
+                            <source type="image/webp" srcset="assets/img/screens/reveal-390.webp 390w, assets/img/screens/reveal-780.webp 780w" sizes="300px">
+                            <img src="assets/img/screens/reveal-780.png" srcset="assets/img/screens/reveal-390.png 390w, assets/img/screens/reveal-780.png 780w" sizes="300px" width="780" height="1688" alt="The rank reveal screen: a Gold III badge and Ultra's message" loading="lazy">
+                        </picture>
                     </div>
                 </div>
+                <div class="ultra-note hero-ultra" data-parallax="0.35">
+                    <picture>
+                        <source type="image/webp" srcset="assets/img/ultra/ultra-wave-300.webp">
+                        <img src="assets/img/ultra/ultra-wave-300.png" width="112" height="112" alt="Ultra, the mascot coach, waving">
+                    </picture>
+                    <p class="bubble done"><span data-hero-line data-lines='["This is your week. Today is an easy run, keep it chatty.","Your plan, built backwards from race day. It adapts every week.","Go. I keep the pace honest and count every metre of climb.","Gold III. Not bad for day one. Now we climb."]'>This is your week. Today is an easy run, keep it chatty.</span></p>
+                </div>
+                <div class="float-chip xp" data-parallax="-0.5" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-8 12h6l-1 8 8-12h-6z"/></svg>+120 XP</div>
+                <div class="float-chip streak" data-parallax="0.7" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 1-3s0 2 2 2c0-4 2-5 2-9Z"/></svg>5-day streak</div>
+                <div class="float-badge" data-parallax="-0.25" data-tier="gold" aria-hidden="true">
+                    <div class="badge" data-tier="gold">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/badges/rank-gold-240.webp 240w, assets/img/badges/rank-gold-480.webp 480w" sizes="128px">
+                            <img src="assets/img/badges/rank-gold-240.png" srcset="assets/img/badges/rank-gold-240.png 240w, assets/img/badges/rank-gold-480.png 480w" sizes="128px" width="240" height="240" alt="">
+                        </picture>
+                    </div>
+                    <div class="pips" data-tier="gold"><i class="on"></i><i></i><i></i></div>
+                    <span class="tier-label metal" data-tier="gold">Gold III</span>
+                </div>
+                <ol class="hero-dots" aria-label="Screens shown in the phone">
+                    <li><button type="button" data-goto="0" aria-current="true" aria-label="Home"></button></li>
+                    <li><button type="button" data-goto="1" aria-label="Plan"></button></li>
+                    <li><button type="button" data-goto="2" aria-label="Run"></button></li>
+                    <li><button type="button" data-goto="3" aria-label="Rank reveal"></button></li>
+                </ol>
             </div>
         </div>
+    </section>
 
-        <div class="feature-row reverse">
-            <div class="feature-copy">
-                <span class="feature-eyebrow">Finish-time prediction</span>
-                <h2>Know exactly how your race will go</h2>
-                <p>A live finish-time projection that gets sharper every time you train, paired with a full elevation breakdown of your race's GPX file, graded by steepness with checkpoint splits, so nothing on course catches you off guard.</p>
+    <!-- 2. Race marquee -->
+    <section class="marquee" aria-label="Races">
+        <div class="marquee-track" data-dir="1" aria-hidden="true">
+            <ul><li>UTMB</li><li>Western States</li><li>Lavaredo Ultra Trail</li><li>Marathon des Sables</li><li>Diagonale des Fous</li><li>Tor des Géants</li><li>Hardrock 100</li><li>CCC</li></ul>
+            <ul><li>UTMB</li><li>Western States</li><li>Lavaredo Ultra Trail</li><li>Marathon des Sables</li><li>Diagonale des Fous</li><li>Tor des Géants</li><li>Hardrock 100</li><li>CCC</li></ul>
+        </div>
+        <div class="marquee-track" data-dir="-1" aria-hidden="true">
+            <ul><li>Transgrancanaria</li><li>Eiger Ultra Trail</li><li>Madeira Island Ultra Trail</li><li>SaintéLyon</li><li>Big Dog's Backyard Ultra</li><li>Spartathlon</li><li>Comrades</li><li>Your local 50K</li></ul>
+            <ul><li>Transgrancanaria</li><li>Eiger Ultra Trail</li><li>Madeira Island Ultra Trail</li><li>SaintéLyon</li><li>Big Dog's Backyard Ultra</li><li>Spartathlon</li><li>Comrades</li><li>Your local 50K</li></ul>
+        </div>
+        <p class="caption">Any race, any format, one scale. Race names belong to their organisers; UltraTrain is not affiliated with them.</p>
+    </section>
+
+    <!-- 3. Rank your race: the calculator (RaceTierCalculator ported to rank-calc.js) -->
+    <section class="section calc" id="rank" aria-labelledby="calc-title">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow">Rank your race</p>
+                <h2 id="calc-title">Which tier is your race?</h2>
+                <p class="lead">Type a distance and a climb, or tap a race. The app's own formula does the rest: every 100 m of climb counts as one more kilometre.</p>
             </div>
-            <div class="feature-visual">
-                <div class="duo-phones">
-                    <div class="phone-frame back">
-                        <div class="bezel">
-                            <img src="assets/screens/gpx.jpg" alt="UltraTrain GPX course profile with graded climbs and checkpoint splits">
+            <div class="calc-grid">
+                <form class="card calc-form" data-calc onsubmit="return false">
+                    <div>
+                        <p class="label">Well-known races, approximate course figures</p>
+                        <!-- Figures from the organisers' published course data, rounded. UTMB 2025 announced course 176 km / 10 000 m;
+                             Western States 100.2 mi (161 km) / 18 090 ft (5 500 m); Lavaredo Ultra Trail 120 km / 5 800 m;
+                             Marathon des Sables 2025 (ITRA listing) 250 km / 2 700 m; Tor des Géants 330 km / 24 000 m. -->
+                        <div class="race-chips" role="group" aria-label="Well-known races">
+                            <button type="button" class="chip" data-race data-name="UTMB" data-km="176" data-dplus="10000" aria-pressed="false">UTMB<small>176 km, 10 000 m D+</small></button>
+                            <button type="button" class="chip" data-race data-name="Western States 100" data-km="161" data-dplus="5500" aria-pressed="false">Western States<small>161 km, 5 500 m D+</small></button>
+                            <button type="button" class="chip" data-race data-name="Lavaredo Ultra Trail" data-km="120" data-dplus="5800" aria-pressed="false">Lavaredo<small>120 km, 5 800 m D+</small></button>
+                            <button type="button" class="chip" data-race data-name="Marathon des Sables" data-km="250" data-dplus="2700" aria-pressed="false">Marathon des Sables<small>250 km, 2 700 m D+</small></button>
+                            <button type="button" class="chip" data-race data-name="Tor des Géants" data-km="330" data-dplus="24000" aria-pressed="false">Tor des Géants<small>330 km, 24 000 m D+</small></button>
+                            <button type="button" class="chip" data-race data-name="A local 50K" data-km="50" data-dplus="1500" aria-pressed="true">A local 50K<small>50 km, 1 500 m D+</small></button>
+                            <button type="button" class="chip" data-race data-name="Backyard ultra" data-backyard="1" data-loops="24" aria-pressed="false">Backyard ultra<small>counted in loops</small></button>
                         </div>
                     </div>
-                    <div class="phone-frame front">
-                        <div class="bezel">
-                            <img src="assets/screens/finishtime.jpg" alt="UltraTrain finish time evolution chart over the training block">
+                    <div class="calc-fields" data-mode="race">
+                        <div class="field race-only">
+                            <div class="field-row"><label for="calc-km">Distance</label><span class="num"><input id="calc-km" type="number" inputmode="decimal" min="1" max="1000" step="1" value="50"><span class="unit">km</span></span></div>
+                            <input type="range" min="5" max="400" step="1" value="50" aria-label="Distance in kilometres" data-mirror="calc-km">
+                        </div>
+                        <div class="field race-only">
+                            <div class="field-row"><label for="calc-dplus">Climb, D+</label><span class="num"><input id="calc-dplus" type="number" inputmode="numeric" min="0" max="50000" step="50" value="1500"><span class="unit">m</span></span></div>
+                            <input type="range" min="0" max="25000" step="100" value="1500" aria-label="Elevation gain in metres" data-mirror="calc-dplus">
+                        </div>
+                        <div class="field backyard-only">
+                            <div class="field-row"><label for="calc-loops">Loops completed</label><span class="stepper"><button type="button" data-step="-1" aria-label="One loop less">&minus;</button><span class="num"><input id="calc-loops" type="number" inputmode="numeric" min="1" max="120" step="1" value="24"><span class="unit">loops</span></span><button type="button" data-step="1" aria-label="One loop more">+</button></span></div>
+                            <input type="range" min="1" max="100" step="1" value="24" aria-label="Loops completed" data-mirror="calc-loops">
+                        </div>
+                    </div>
+                    <p class="calc-note" data-note>Equivalent km = distance + climb / 100. Race tiers have no divisions.</p>
+                </form>
+
+                <div class="card calc-result" data-result data-tier="gold">
+                    <p class="eyebrow">Equivalent km</p>
+                    <div class="eq" aria-live="polite" aria-atomic="true"><span data-eq>65</span><small>eq km</small></div>
+                    <p class="formula-line" data-formula>50 km + 1 500 m / 100 = 65 equivalent km</p>
+                    <ol class="ladder-mini" aria-hidden="true">
+                        <li data-tier="bronze"><span>Bronze</span></li><li data-tier="silver"><span>Silver</span></li><li data-tier="gold"><span>Gold</span></li><li data-tier="platinum"><span>Platinum</span></li><li data-tier="diamond"><span>Diamond</span></li><li data-tier="champion"><span>Champion</span></li><li data-tier="ultralegend"><span>Legend</span></li>
+                    </ol>
+                    <div class="tier-reveal" data-reveal-badge>
+                        <div class="particles" aria-hidden="true"></div>
+                        <div class="badge" data-tier="gold" data-badge>
+                            <picture data-tier="bronze"><source type="image/webp" srcset="assets/img/badges/rank-bronze-480.webp"><img src="assets/img/badges/rank-bronze-480.png" width="480" height="480" alt="Bronze badge" loading="lazy"></picture>
+                            <picture data-tier="silver"><source type="image/webp" srcset="assets/img/badges/rank-silver-480.webp"><img src="assets/img/badges/rank-silver-480.png" width="480" height="480" alt="Silver badge" loading="lazy"></picture>
+                            <picture class="is-active" data-tier="gold"><source type="image/webp" srcset="assets/img/badges/rank-gold-480.webp"><img src="assets/img/badges/rank-gold-480.png" width="480" height="480" alt="Gold badge"></picture>
+                            <picture data-tier="platinum"><source type="image/webp" srcset="assets/img/badges/rank-platinum-480.webp"><img src="assets/img/badges/rank-platinum-480.png" width="480" height="480" alt="Platinum badge" loading="lazy"></picture>
+                            <picture data-tier="diamond"><source type="image/webp" srcset="assets/img/badges/rank-diamond-480.webp"><img src="assets/img/badges/rank-diamond-480.png" width="480" height="480" alt="Diamond badge" loading="lazy"></picture>
+                            <picture data-tier="champion"><source type="image/webp" srcset="assets/img/badges/rank-champion-480.webp"><img src="assets/img/badges/rank-champion-480.png" width="480" height="480" alt="Champion badge" loading="lazy"></picture>
+                            <picture data-tier="ultralegend"><source type="image/webp" srcset="assets/img/badges/rank-ultralegend-480.webp"><img src="assets/img/badges/rank-ultralegend-480.png" width="480" height="480" alt="Ultra Legend badge" loading="lazy"></picture>
+                        </div>
+                        <p class="tier-kicker">Race tier</p>
+                        <p class="tier-name metal" data-tier-name aria-live="polite">Gold</p>
+                    </div>
+                    <div class="ultra-note">
+                        <picture>
+                            <source type="image/webp" srcset="assets/img/ultra/ultra-think-300.webp">
+                            <img src="assets/img/ultra/ultra-think-300.png" width="72" height="72" alt="Ultra thinking" loading="lazy">
+                        </picture>
+                        <p class="bubble done"><span data-tier-line data-lines='{"bronze":"A Bronze race. The perfect first step, and a good place to test your fuelling.","silver":"Silver. Your first real ultra distance. Respect it, enjoy it.","gold":"Gold. Now the climb starts to count. Train the legs for the descents too.","platinum":"Platinum. This is where the night and the stomach decide the race.","diamond":"Diamond. One finished ultra in your history unlocks this tier for your rank.","champion":"Champion. Few races go this far. Your plan will go there with you.","ultralegend":"Ultra Legend. The top of the scale. Only a handful of races live here."}'>Gold. Now the climb starts to count. Train the legs for the descents too.</span></p>
+                    </div>
+                    <div class="calc-ctas">
+                        <a class="btn btn-primary" href="https://apps.apple.com/app/ultratrain/id6759983118">Find your own rank</a>
+                        <a class="app-store" href="https://apps.apple.com/app/ultratrain/id6759983118"><img src="assets/img/app-store-badge-en.svg" width="138" height="46" alt="Download on the App Store" loading="lazy"></a>
+                        <button type="button" class="btn btn-ghost" data-share-tier><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg>Share my race tier</button>
+                    </div>
+                    <p class="share-status" data-share-status aria-live="polite"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Curtain photo band (slides over the calculator) -->
+    <section class="band" aria-labelledby="band-title" data-band>
+        <picture class="band-bg">
+            <source type="image/webp" srcset="assets/img/photos/band-landscape.webp">
+            <img src="assets/img/photos/band-landscape.jpg" width="2400" height="1350" alt="" loading="lazy">
+        </picture>
+        <div class="band-inner">
+            <h2 id="band-title">Every 100 m of climb counts as <em>one more kilometre.</em></h2>
+            <p>That is the only conversion in the app. One scale for everyone, road and mountain, men and women.</p>
+        </div>
+    </section>
+
+    <!-- 5. The ladder: pinned horizontal climb -->
+    <section class="section ladder" aria-labelledby="ladder-title" data-ladder>
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow">The ladder</p>
+                <h2 id="ladder-title">From Bronze to Ultra Legend.</h2>
+                <p class="lead">Seven tiers, three divisions each. Your level score places you, the XP from your training moves you up, and real life can move you down.</p>
+            </div>
+        </div>
+        <div class="ladder-pin">
+            <div class="ladder-track" aria-label="The seven tiers">
+                <article class="card rung" data-tier="bronze" data-rung>
+                    <div class="badge" data-tier="bronze"><picture><source type="image/webp" srcset="assets/img/badges/rank-bronze-240.webp 240w, assets/img/badges/rank-bronze-480.webp 480w" sizes="220px"><img src="assets/img/badges/rank-bronze-480.png" width="480" height="480" alt="Bronze badge: a bronze mountain crest" loading="lazy"></picture></div>
+                    <div class="pips" data-pips><i class="on"></i><i></i><i></i></div>
+                    <h3 class="metal">Bronze</h3>
+                    <p class="range">Level score under 350</p>
+                    <p class="about">Where structured training starts. Short races and first long runs.</p>
+                    <p class="xp">500 XP per division</p>
+                </article>
+                <article class="card rung" data-tier="silver" data-rung>
+                    <div class="badge" data-tier="silver"><picture><source type="image/webp" srcset="assets/img/badges/rank-silver-240.webp 240w, assets/img/badges/rank-silver-480.webp 480w" sizes="220px"><img src="assets/img/badges/rank-silver-480.png" width="480" height="480" alt="Silver badge" loading="lazy"></picture></div>
+                    <div class="pips" data-pips><i class="on"></i><i></i><i></i></div>
+                    <h3 class="metal">Silver</h3>
+                    <p class="range">350 to 450</p>
+                    <p class="about">Regular weeks and a first 50K in sight.</p>
+                    <p class="xp">900 XP per division</p>
+                </article>
+                <article class="card rung" data-tier="gold" data-rung>
+                    <div class="badge" data-tier="gold"><picture><source type="image/webp" srcset="assets/img/badges/rank-gold-240.webp 240w, assets/img/badges/rank-gold-480.webp 480w" sizes="220px"><img src="assets/img/badges/rank-gold-480.png" width="480" height="480" alt="Gold badge with small wings" loading="lazy"></picture></div>
+                    <div class="pips" data-pips><i class="on"></i><i></i><i></i></div>
+                    <h3 class="metal">Gold</h3>
+                    <p class="range">450 to 550</p>
+                    <p class="about">A solid base and real climbing in your weeks.</p>
+                    <p class="xp">1 400 XP per division</p>
+                </article>
+                <article class="card rung" data-tier="platinum" data-rung>
+                    <div class="badge" data-tier="platinum"><picture><source type="image/webp" srcset="assets/img/badges/rank-platinum-240.webp 240w, assets/img/badges/rank-platinum-480.webp 480w" sizes="220px"><img src="assets/img/badges/rank-platinum-480.png" width="480" height="480" alt="Platinum badge with wings" loading="lazy"></picture></div>
+                    <div class="pips" data-pips><i class="on"></i><i></i><i></i></div>
+                    <h3 class="metal">Platinum</h3>
+                    <p class="range">550 to 650</p>
+                    <p class="about">100 km is a goal, not a dream. Without a finished ultra, your rank stops here.</p>
+                    <p class="xp">2 000 XP per division</p>
+                </article>
+                <article class="card rung" data-tier="diamond" data-rung>
+                    <div class="badge" data-tier="diamond"><picture><source type="image/webp" srcset="assets/img/badges/rank-diamond-240.webp 240w, assets/img/badges/rank-diamond-480.webp 480w" sizes="220px"><img src="assets/img/badges/rank-diamond-480.png" width="480" height="480" alt="Diamond badge with full wings" loading="lazy"></picture></div>
+                    <div class="pips" data-pips><i class="on"></i><i></i><i></i></div>
+                    <h3 class="metal">Diamond</h3>
+                    <p class="range">650 to 750</p>
+                    <p class="about">Needs one finished ultra in your history. From here, the results do the talking.</p>
+                    <p class="xp">2 800 XP per division</p>
+                </article>
+                <article class="card rung" data-tier="champion" data-rung>
+                    <div class="badge" data-tier="champion"><picture><source type="image/webp" srcset="assets/img/badges/rank-champion-240.webp 240w, assets/img/badges/rank-champion-480.webp 480w" sizes="220px"><img src="assets/img/badges/rank-champion-480.png" width="480" height="480" alt="Champion badge with wings and a crown" loading="lazy"></picture></div>
+                    <div class="pips" data-pips><i class="on"></i><i></i><i></i></div>
+                    <h3 class="metal">Champion</h3>
+                    <p class="range">750 to 850</p>
+                    <p class="about">Front of the pack on long mountain races.</p>
+                    <p class="xp">4 400 XP per division</p>
+                </article>
+                <article class="card rung" data-tier="ultralegend" data-rung>
+                    <div class="badge" data-tier="ultralegend"><picture><source type="image/webp" srcset="assets/img/badges/rank-ultralegend-240.webp 240w, assets/img/badges/rank-ultralegend-480.webp 480w" sizes="220px"><img src="assets/img/badges/rank-ultralegend-480.png" width="480" height="480" alt="Ultra Legend badge with wings, crown and visor" loading="lazy"></picture></div>
+                    <div class="pips" data-pips data-single><i class="on"></i></div>
+                    <h3 class="metal">Ultra Legend</h3>
+                    <p class="range">850 and above</p>
+                    <p class="about">One division. The very top of the scale.</p>
+                    <p class="xp">No division above this one</p>
+                </article>
+            </div>
+            <div class="ladder-progress" aria-hidden="true"><i data-ladder-bar></i></div>
+        </div>
+    </section>
+
+    <!-- 6. Player card with presets -->
+    <section class="section" aria-labelledby="card-title">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="container split">
+            <div data-reveal>
+                <div class="phone" style="--phone-w: 250px">
+                    <picture>
+                        <source type="image/webp" srcset="assets/img/screens/playercard-390.webp 390w, assets/img/screens/playercard-780.webp 780w" sizes="250px">
+                        <img src="assets/img/screens/playercard-780.png" srcset="assets/img/screens/playercard-390.png 390w, assets/img/screens/playercard-780.png 780w" sizes="250px" width="780" height="1688" alt="The player card screen: level 657, Diamond III, a hexagon with six stats" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+            <div data-reveal>
+                <p class="eyebrow">The player card</p>
+                <h2 id="card-title">Six stats. One shape that is yours.</h2>
+                <p class="lead" style="margin-top:14px">The rank shows what you have earned. The card shows what you can do: endurance, climbing, descending, speed, durability and consistency, all computed from your runs.</p>
+                <div class="presets" role="group" aria-label="Example profiles">
+                    <button type="button" class="chip" data-preset="88,41,45,90,70,82" aria-pressed="true">Road runner</button>
+                    <button type="button" class="chip" data-preset="74,92,85,52,80,76" aria-pressed="false">Mountain goat</button>
+                    <button type="button" class="chip" data-preset="86,48,50,58,96,94" aria-pressed="false">Backyard grinder</button>
+                </div>
+                <div class="hex-wrap" data-hex data-values="88,41,45,90,70,82" role="img" aria-label="Example hexagon: endurance 88, climbing 41, descending 45, speed 90, durability 70, consistency 82" data-label="Example hexagon: endurance {0}, climbing {1}, descending {2}, speed {3}, durability {4}, consistency {5}">
+                    <svg viewBox="0 0 400 400" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="hexfill" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#2EC5FF" stop-opacity=".55"/>
+                                <stop offset="1" stop-color="#7A5CFF" stop-opacity=".35"/>
+                            </linearGradient>
+                        </defs>
+                        <polygon class="grid" points="200,50 329.9,125 329.9,275 200,350 70.1,275 70.1,125"/>
+                        <polygon class="grid" points="200,87.5 297.4,143.75 297.4,256.25 200,312.5 102.6,256.25 102.6,143.75"/>
+                        <polygon class="grid" points="200,125 264.9,162.5 264.9,237.5 200,275 135.1,237.5 135.1,162.5"/>
+                        <polygon class="grid" points="200,162.5 232.5,181.25 232.5,218.75 200,237.5 167.5,218.75 167.5,181.25"/>
+                        <g class="axis"><line x1="200" y1="200" x2="200" y2="50"/><line x1="200" y1="200" x2="329.9" y2="125"/><line x1="200" y1="200" x2="329.9" y2="275"/><line x1="200" y1="200" x2="200" y2="350"/><line x1="200" y1="200" x2="70.1" y2="275"/><line x1="200" y1="200" x2="70.1" y2="125"/></g>
+                        <polygon class="area" data-area points="200,68 253.4,169.2 258.4,233.8 200,335 109.1,252.5 93.5,138.5"/>
+                        <circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/><circle class="dot" r="4"/>
+                        <text class="lbl" x="200" y="36" text-anchor="middle">END</text><text class="val" x="200" y="18" text-anchor="middle" data-val="0">88</text>
+                        <text class="lbl" x="352" y="122" text-anchor="start">CLB</text><text class="val" x="352" y="104" text-anchor="start" data-val="1">41</text>
+                        <text class="lbl" x="352" y="296" text-anchor="start">DES</text><text class="val" x="352" y="318" text-anchor="start" data-val="2">45</text>
+                        <text class="lbl" x="200" y="372" text-anchor="middle">SPD</text><text class="val" x="200" y="394" text-anchor="middle" data-val="3">90</text>
+                        <text class="lbl" x="48" y="296" text-anchor="end">DUR</text><text class="val" x="48" y="318" text-anchor="end" data-val="4">70</text>
+                        <text class="lbl" x="48" y="122" text-anchor="end">CON</text><text class="val" x="48" y="104" text-anchor="end" data-val="5">82</text>
+                        <text class="ovr-l" x="200" y="188" text-anchor="middle">OVR</text><text class="ovr" x="200" y="222" text-anchor="middle" data-ovr>69</text>
+                    </svg>
+                </div>
+                <ul class="stats">
+                    <li class="card"><span class="code">END</span><span><span class="name">Endurance</span><span class="def">Longest efforts and weekly volume</span></span></li>
+                    <li class="card"><span class="code">CLB</span><span><span class="name">Climbing</span><span class="def">Vertical gain and uphill speed</span></span></li>
+                    <li class="card"><span class="code">DES</span><span><span class="name">Descending</span><span class="def">Downhill pace compared to flat</span></span></li>
+                    <li class="card"><span class="code">SPD</span><span><span class="name">Speed</span><span class="def">Best road time as a 10K equivalent</span></span></li>
+                    <li class="card"><span class="code">DUR</span><span><span class="name">Durability</span><span class="def">How your pace holds late in long runs</span></span></li>
+                    <li class="card"><span class="code">CON</span><span><span class="name">Consistency</span><span class="def">Sessions done and streak, last 8 weeks</span></span></li>
+                </ul>
+                <span class="example-tag">Example cards, not real runners</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. How it works: the phone stays, the steps scroll -->
+    <section class="section" id="how" aria-labelledby="how-title">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow">How it works</p>
+                <h2 id="how-title">Three steps to the start line.</h2>
+            </div>
+            <div class="how-grid" data-how>
+                <div class="how-steps">
+                    <article class="card how-step" data-step="0">
+                        <span class="num">01</span>
+                        <h3>Answer Ultra's questions</h3>
+                        <p>One question per screen, no form. Where you run, which ultras tempt you, your best times, how many days a week you can train. "Not sure" is always an answer.</p>
+                        <div class="phone"><picture><source type="image/webp" srcset="assets/img/screens/main-390.webp"><img src="assets/img/screens/main-390.png" width="390" height="844" alt="Onboarding screen with Ultra asking a question" loading="lazy"></picture></div>
+                    </article>
+                    <article class="card how-step" data-step="1">
+                        <span class="num">02</span>
+                        <h3>Get your plan and your rank</h3>
+                        <p>Your answers place you on the ladder. Pick a race, or a first ultra, or just a fitness block, and the plan is built from race day backwards.</p>
+                        <div class="phone"><picture><source type="image/webp" srcset="assets/img/screens/reveal-390.webp"><img src="assets/img/screens/reveal-390.png" width="390" height="844" alt="Rank reveal screen with the Gold III badge" loading="lazy"></picture></div>
+                    </article>
+                    <article class="card how-step" data-step="2">
+                        <span class="num">03</span>
+                        <h3>Train and climb</h3>
+                        <p>Every run and every completed session earns XP. Validated rest days too. Finish a race and your level is recomputed. Stop for weeks and the rank slips, like real life.</p>
+                        <div class="phone"><picture><source type="image/webp" srcset="assets/img/screens/run2-390.webp"><img src="assets/img/screens/run2-390.png" width="390" height="844" alt="Run tracking screen with live pace, distance and elevation" loading="lazy"></picture></div>
+                    </article>
+                </div>
+                <aside class="how-aside" aria-hidden="true">
+                    <div class="phone">
+                        <div class="screens">
+                            <picture class="screen is-active" data-screen="0"><source type="image/webp" srcset="assets/img/screens/main-390.webp 390w, assets/img/screens/main-780.webp 780w" sizes="310px"><img src="assets/img/screens/main-780.png" srcset="assets/img/screens/main-390.png 390w, assets/img/screens/main-780.png 780w" sizes="310px" width="780" height="1688" alt="" loading="lazy"></picture>
+                            <picture class="screen" data-screen="1"><source type="image/webp" srcset="assets/img/screens/reveal-390.webp 390w, assets/img/screens/reveal-780.webp 780w" sizes="310px"><img src="assets/img/screens/reveal-780.png" srcset="assets/img/screens/reveal-390.png 390w, assets/img/screens/reveal-780.png 780w" sizes="310px" width="780" height="1688" alt="" loading="lazy"></picture>
+                            <picture class="screen" data-screen="2"><source type="image/webp" srcset="assets/img/screens/run2-390.webp 390w, assets/img/screens/run2-780.webp 780w" sizes="310px"><img src="assets/img/screens/run2-780.png" srcset="assets/img/screens/run2-390.png 390w, assets/img/screens/run2-780.png 780w" sizes="310px" width="780" height="1688" alt="" loading="lazy"></picture>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Your plan: builds itself from a race date (PhaseDistributor rules in rank-calc.js) -->
+    <section class="section" id="features" aria-labelledby="plan-title">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="container plan-grid" data-plan>
+            <div>
+                <p class="eyebrow">Your plan</p>
+                <h2 id="plan-title">Built from race day backwards. Adjusted when life happens.</h2>
+                <p class="lead" style="margin-top:14px">Pick a race and a date. The phases size themselves the way the app does: a taper shaped by the race, a build before it, a base before that, recovery weeks in between.</p>
+                <div class="plan-controls">
+                    <div class="row" role="group" aria-label="Race">
+                        <button type="button" class="chip" data-plan-race="65" data-label="50K trail" aria-pressed="false">50K trail<small>&nbsp;65 eq km</small></button>
+                        <button type="button" class="chip" data-plan-race="160" data-label="100K mountain" aria-pressed="true">100K mountain<small>&nbsp;160 eq km</small></button>
+                        <button type="button" class="chip" data-plan-race="215" data-label="100 miles" aria-pressed="false">100 miles<small>&nbsp;215 eq km</small></button>
+                    </div>
+                    <div class="row">
+                        <label class="inline">Race day <input type="date" data-plan-date></label>
+                        <label class="inline">Level
+                            <select data-plan-level>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate" selected>Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                                <option value="elite">Elite</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="weeks-head"><span class="muted">Weeks to race day</span><b><span data-plan-weeks>20</span> weeks</b></div>
+                <ol class="weeks" data-plan-weeks-list aria-label="Weekly volume by phase"></ol>
+                <ul class="legend" aria-hidden="true">
+                    <li><i style="--c: var(--cyan)"></i>Base</li><li><i style="--c: #8f7cff"></i>Build</li><li><i style="--c: #c56cff"></i>Peak</li><li><i style="--c: var(--coral)"></i>Taper</li><li><i style="--c: var(--red)"></i>Race</li><li><i style="--c: var(--border-strong)"></i>Recovery week</li>
+                </ul>
+                <div class="skip-row">
+                    <p class="label small muted" style="margin:0 0 8px">This week, you...</p>
+                    <div class="seg" role="group" aria-label="Skipped sessions this week">
+                        <button type="button" data-skip="none" aria-pressed="true">Did everything</button>
+                        <button type="button" data-skip="single" aria-pressed="false">Skipped one session</button>
+                        <button type="button" data-skip="pattern" aria-pressed="false">Skipped three, tired</button>
+                    </div>
+                </div>
+                <div class="ultra-note">
+                    <picture>
+                        <source type="image/webp" srcset="assets/img/ultra/ultra-planning-300.webp">
+                        <img src="assets/img/ultra/ultra-planning-300.png" width="88" height="88" alt="Ultra holding a plan" loading="lazy">
+                    </picture>
+                    <!-- The two adaptation lines are the app's own strings, keys sk.039 and sk.024 in Localizable.xcstrings. -->
+                    <p class="bubble done"><span data-plan-line data-lines='{"none":"Good week. Keep the easy days easy, the hard day is Saturday.","single":"Skipped for time. No plan changes needed.","pattern":"Multiple sessions skipped recently. Small adjustment to keep the plan achievable."}'>Good week. Keep the easy days easy, the hard day is Saturday.</span></p>
+                </div>
+            </div>
+            <div data-reveal>
+                <div class="phone">
+                    <picture>
+                        <source type="image/webp" srcset="assets/img/screens/plan2-390.webp 390w, assets/img/screens/plan2-780.webp 780w" sizes="290px">
+                        <img src="assets/img/screens/plan2-780.png" srcset="assets/img/screens/plan2-390.png 390w, assets/img/screens/plan2-780.png 780w" sizes="290px" width="780" height="1688" alt="The Plan tab: the current week with its sessions and the phases up to race day" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Share your runs: story phone + picker -->
+    <section class="section" aria-labelledby="share-title">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow">Share your runs</p>
+                <h2 id="share-title">Your run, your photo, one clean overlay.</h2>
+                <p class="lead">Twenty-nine templates drawn from your run's data: the trace, the climb, the splits, the summit. Every one keeps a 300 m privacy zone around your start and finish.</p>
+            </div>
+            <div class="story-grid" data-story>
+                <div class="phone story-phone" data-story-phone>
+                    <picture class="story-photo">
+                        <source type="image/webp" srcset="assets/img/photos/trail-portrait-1.webp">
+                        <img src="assets/img/photos/trail-portrait-1.jpg" width="1080" height="1920" alt="" loading="lazy">
+                    </picture>
+                    <div class="story-stickers">
+                        <picture class="is-active" data-sticker="0"><source type="image/webp" srcset="assets/img/overlays/01-trace.webp"><img src="assets/img/overlays/01-trace.png" width="420" height="747" alt="Trace overlay: the GPS line and four stats" loading="lazy"></picture>
+                        <picture data-sticker="1"><source type="image/webp" srcset="assets/img/overlays/02-vert.webp"><img src="assets/img/overlays/02-vert.png" width="420" height="747" alt="Vert overlay: the climb as a share of Everest" loading="lazy"></picture>
+                        <picture data-sticker="2"><source type="image/webp" srcset="assets/img/overlays/06-topo.webp"><img src="assets/img/overlays/06-topo.png" width="420" height="747" alt="Topo overlay: contour lines and the route" loading="lazy"></picture>
+                        <picture data-sticker="3"><source type="image/webp" srcset="assets/img/overlays/07-up-and-down.webp"><img src="assets/img/overlays/07-up-and-down.png" width="420" height="747" alt="Up and down overlay: climb and descent per kilometre" loading="lazy"></picture>
+                        <picture data-sticker="4"><source type="image/webp" srcset="assets/img/overlays/09-ticket.webp"><img src="assets/img/overlays/09-ticket.png" width="420" height="747" alt="Ticket overlay: a run pass with six stats" loading="lazy"></picture>
+                        <picture data-sticker="5"><source type="image/webp" srcset="assets/img/overlays/14-peak.webp"><img src="assets/img/overlays/14-peak.png" width="420" height="747" alt="Peak overlay: the elevation profile as a mountain with a flag" loading="lazy"></picture>
+                        <picture data-sticker="6"><source type="image/webp" srcset="assets/img/overlays/20-watch-face.webp"><img src="assets/img/overlays/20-watch-face.png" width="420" height="747" alt="Watch face overlay with a heart rate bezel" loading="lazy"></picture>
+                        <picture data-sticker="7"><source type="image/webp" srcset="assets/img/overlays/25-medal.webp"><img src="assets/img/overlays/25-medal.png" width="420" height="747" alt="Medal overlay: a finisher medal with the race name" loading="lazy"></picture>
+                    </div>
+                    <div class="story-bar" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="story-side">
+                    <p class="eyebrow">Like the in-app picker</p>
+                    <h3 data-sticker-name>Trace</h3>
+                    <p class="desc" data-sticker-desc>Your GPS line and four numbers. The classic.</p>
+                    <div class="picker" role="tablist" aria-label="Overlay templates" data-picker>
+                        <button type="button" role="tab" aria-selected="true" data-pick="0" data-name="Trace" data-desc="Your GPS line and four numbers. The classic."><img src="assets/img/overlays/01-trace-thumb.webp" width="180" height="320" alt="Trace" loading="lazy"></button>
+                        <button type="button" role="tab" aria-selected="false" data-pick="1" data-name="Vert" data-desc="Your climb as a share of Everest."><img src="assets/img/overlays/02-vert-thumb.webp" width="180" height="320" alt="Vert" loading="lazy"></button>
+                        <button type="button" role="tab" aria-selected="false" data-pick="2" data-name="Topo" data-desc="Contour lines around your route."><img src="assets/img/overlays/06-topo-thumb.webp" width="180" height="320" alt="Topo" loading="lazy"></button>
+                        <button type="button" role="tab" aria-selected="false" data-pick="3" data-name="Up and down" data-desc="Climb and descent, kilometre by kilometre."><img src="assets/img/overlays/07-up-and-down-thumb.webp" width="180" height="320" alt="Up and down" loading="lazy"></button>
+                        <button type="button" role="tab" aria-selected="false" data-pick="4" data-name="Ticket" data-desc="A run pass with six stats."><img src="assets/img/overlays/09-ticket-thumb.webp" width="180" height="320" alt="Ticket" loading="lazy"></button>
+                        <button type="button" role="tab" aria-selected="false" data-pick="5" data-name="Peak" data-desc="Your elevation profile drawn as a mountain, with a flag on the summit."><img src="assets/img/overlays/14-peak-thumb.webp" width="180" height="320" alt="Peak" loading="lazy"></button>
+                        <button type="button" role="tab" aria-selected="false" data-pick="6" data-name="Watch face" data-desc="A watch face with your heart rate on the bezel."><img src="assets/img/overlays/20-watch-face-thumb.webp" width="180" height="320" alt="Watch face" loading="lazy"></button>
+                        <button type="button" role="tab" aria-selected="false" data-pick="7" data-name="Medal" data-desc="A finisher medal with the race name."><img src="assets/img/overlays/25-medal-thumb.webp" width="180" height="320" alt="Medal" loading="lazy"></button>
+                    </div>
+                    <p class="muted small">Swipe the phone or tap a template. Sample run on every overlay. Export as a story, a square post, or a transparent sticker.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 11. Comparison: flips as you scroll -->
+    <section class="section" aria-labelledby="compare-title">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow">Why UltraTrain</p>
+                <h2 id="compare-title">Generic running apps give you a pace. We give you a rank.</h2>
+            </div>
+            <div class="flip-stage" data-flip>
+                <div class="flip-card">
+                    <div class="face card them">
+                        <h3>Generic running apps</h3>
+                        <ul>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>A weekly kilometre target, the same shape for a marathon and a 100-miler</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>A pace and a VO2max estimate that say nothing about your climbing</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>Miss a week and the plan carries on as if nothing happened</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>Flat kilometres, as if 100 m of climb were free</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>Charts to read on your own</li>
+                        </ul>
+                    </div>
+                    <div class="face card us">
+                        <h3><img src="assets/app-icon.png" width="28" height="28" alt="" style="border-radius:8px">UltraTrain</h3>
+                        <ul>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>A plan built from your race's distance, elevation and cutoffs, backwards from race day</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>A level score from your real results and a rank you earn with the work you do</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>A plan that adapts every week to what you actually ran, and why you skipped</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Every 100 m of climb counts as one kilometre of effort, in your plan and your rank</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ultra briefs you before each session and reacts after every run</li>
+                        </ul>
+                        <div class="ultra-note">
+                            <picture>
+                                <source type="image/webp" srcset="assets/img/ultra/ultra-present-300.webp">
+                                <img src="assets/img/ultra/ultra-present-300.png" width="64" height="64" alt="Ultra presenting" loading="lazy">
+                            </picture>
+                            <p class="bubble done"><span>One scale for everyone. Same for men and women, same for every kind of ultra.</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="feature-row">
-            <div class="feature-copy">
-                <span class="feature-eyebrow">Race-day nutrition</span>
-                <h2>Your fueling plan, down to the hour</h2>
-                <p>Carbs, hydration, and sodium targets calculated for your body and your race, mapped to an hour-by-hour timeline so you never have to guess mid-race.</p>
+    <!-- TESTIMONIALS: add real quotes from real runners here, with their permission.
+         None are invented. Until then this slot stays empty on purpose.
+    <section class="section" aria-labelledby="quotes-title">
+        <div class="container">
+            <div class="section-head center"><p class="eyebrow">Runners</p><h2 id="quotes-title">What runners say</h2></div>
+            <blockquote class="card" style="padding:24px"><p>"Quote"</p><footer>First name, race</footer></blockquote>
+        </div>
+    </section>
+    -->
+
+    <!-- 12. FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+            <div class="section-head center">
+                <p class="eyebrow">FAQ</p>
+                <h2 id="faq-title">Questions, answered.</h2>
             </div>
-            <div class="feature-visual">
-                <div class="phone-frame">
-                    <div class="bezel">
-                        <img src="assets/screens/nutrition.jpg" alt="UltraTrain race-day nutrition targets and fueling timeline">
-                    </div>
-                </div>
+            <div class="faq">
+                <details open>
+                    <summary>How much does UltraTrain cost?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                    <div class="answer"><p>UltraTrain is a subscription bought in the app: <strong>14.99 € per month</strong> or <strong>49.99 € per year</strong>. There is no free tier: the whole app is unlocked from day one, and you can cancel anytime from your App Store subscriptions.</p></div>
+                </details>
+                <details>
+                    <summary>Which watches and apps sync with it?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                    <div class="answer"><p>UltraTrain has its own Apple Watch app and reads your runs from <strong>Apple Health</strong> and <strong>Strava</strong>. Garmin, COROS, Suunto and Polar runs come through Strava or Apple Health. Direct Garmin and COROS sync is not available yet. Completed runs can be uploaded to Strava too.</p></div>
+                </details>
+                <details>
+                    <summary>I have never run an ultra. Is it for me?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                    <div class="answer"><p>Yes. The <strong>My first ultra</strong> path builds you up from your current base to a 50K, 60K, 80K or 100K, with safe minimum timelines. The rank starts you where you really are, and finishing your first ultra is what unlocks Diamond. You can also pick <strong>Just build fitness</strong> with no race at all.</p></div>
+                </details>
+                <details>
+                    <summary>Road, trail or backyard?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                    <div class="answer"><p>All three. Plans cover 5K to marathon on road or trail, ultras of any distance and elevation, and <strong>backyard and elimination-laps</strong> formats where the pace is imposed and the goal is counted in loops. Elevation always counts: every 100 m of climb adds one kilometre of effort.</p></div>
+                </details>
+                <details>
+                    <summary>Can I cancel anytime?<span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                    <div class="answer"><p>Yes. Cancel from <strong>Settings, your name, Subscriptions</strong> on your iPhone. You keep access until the end of the period you paid for. Your data stays in your private iCloud until you delete it.</p></div>
+                </details>
             </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="stats">
-    <div class="stats-grid">
-        <div class="stat-item">
-            <h3>D+</h3>
-            <p>Elevation-aware training</p>
-        </div>
-        <div class="stat-item">
-            <h3>3</h3>
-            <p>Finish time scenarios</p>
-        </div>
-        <div class="stat-item">
-            <h3>A/B/C</h3>
-            <p>Multi-race planning</p>
-        </div>
-        <div class="stat-item">
-            <h3>24/7</h3>
-            <p>Works offline</p>
-        </div>
-    </div>
-</section>
-
-<section class="how-it-works">
-    <div class="section-head">
-        <h2>Get started in minutes</h2>
-        <p>From download to your first ultra training plan in under five minutes. Want the structure first? Read the <a href="ultra-trail-training-plan.html" style="color:inherit;text-decoration:underline;">ultra trail training plan guide</a> or the <a href="ultra-marathon-training-plan.html" style="color:inherit;text-decoration:underline;">ultra marathon training plan guide</a>.</p>
-    </div>
-    <div class="steps-grid">
-        <div class="step-card">
-            <div class="step-number">1</div>
-            <h3>Set up your profile</h3>
-            <p>Experience level, running history, and physical data. Connect HealthKit to import your training history automatically.</p>
-        </div>
-        <div class="step-card">
-            <div class="step-number">2</div>
-            <h3>Add your target race</h3>
-            <p>Distance, elevation, date, and goal. Add B/C races as training milestones if you have them.</p>
-        </div>
-        <div class="step-card">
-            <div class="step-number">3</div>
-            <h3>Get your plan</h3>
-            <p>A periodized training plan with integrated nutrition strategy, ready immediately.</p>
-        </div>
-        <div class="step-card">
-            <div class="step-number">4</div>
-            <h3>Train and track</h3>
-            <p>Log runs with GPS, monitor your fitness trend, and watch your predicted finish time evolve.</p>
-        </div>
-    </div>
-</section>
-
-<section class="pricing" id="pricing">
-    <div class="section-head">
-        <h2 style="color: var(--ink);">UltraTrain Premium</h2>
-        <p style="color: var(--ink-dim);">Your full custom race calendar, complete finish-time prediction, and race-day nutrition strategy. No compromises.</p>
-    </div>
-
-    <div class="price-cards">
-        <a href="checkout.html?plan=monthly" class="price-card">
-            <div class="price-tag">Monthly</div>
-            <div class="price-amount">13.49€<span>/mo</span></div>
-            <div class="price-strike">14.99€ on the App Store</div>
-            <div class="price-save">Save 10%</div>
-        </a>
-        <a href="checkout.html?plan=yearly" class="price-card yearly">
-            <div class="price-tag">Yearly</div>
-            <div class="price-amount">44.99€<span>/yr</span></div>
-            <div class="price-strike">49.99€ on the App Store</div>
-            <div class="price-save">Save 10%</div>
-        </a>
-    </div>
-
-    <p class="pricing-web-note">Subscribe on <strong>ultratrain.app</strong> above to get the lower price, then sign in with the same account in the app. Prefer to pay through Apple instead? Download the app and subscribe there at the standard price.</p>
-
-    <div class="pricing-card">
-        <h3>What's included</h3>
-        <ul class="pricing-list">
-            <li><span class="tick">✓</span> Unlimited custom race plans, any distance</li>
-            <li><span class="tick">✓</span> Full finish-time prediction with GPX pacing</li>
-            <li><span class="tick">✓</span> Complete race-day nutrition strategy</li>
-            <li><span class="tick">✓</span> Apple Watch app &amp; Live Activities</li>
-            <li><span class="tick">✓</span> Unlimited A/B/C race calendar</li>
-        </ul>
-        <a href="https://apps.apple.com/app/ultratrain/id6759983118" class="cta-primary">Download on the App Store</a>
-    </div>
-</section>
-
-<section class="faq">
-    <div class="section-head">
-        <h2>Frequently asked questions</h2>
-    </div>
-    <div class="faq-list">
-        <details class="faq-item">
-            <summary>Is UltraTrain free?</summary>
-            <p>Yes. You can build a training plan and start using UltraTrain for free. A premium subscription unlocks unlimited custom race plans and the full feature set.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Does it work with Apple Watch?</summary>
-            <p>Yes. UltraTrain includes a standalone Apple Watch app for GPS and heart rate tracking, plus home screen widgets and Live Activities during your runs.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Is this only for trail and ultra races?</summary>
-            <p>Ultra trail and ultra marathon distances are what UltraTrain is built for, from your first 50K to multi-day races. Road distances from 5K to marathon are supported too.</p>
-        </details>
-        <details class="faq-item">
-            <summary>How is my finish time calculated?</summary>
-            <p>UltraTrain converts your race's distance and elevation into an effort-adjusted distance, then projects your pace from your recent training and personal bests. You get three scenarios instead of one single guess.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Does UltraTrain work without an internet connection?</summary>
-            <p>Yes. Your training plan, run tracking, and nutrition strategy all work fully offline, which matters when you're deep in the mountains.</p>
-        </details>
-    </div>
-</section>
-
-<section class="closing">
-    <h2>Your next start line is waiting.</h2>
-    <p>Build your plan today and see exactly what it takes to get there.</p>
-    <a href="https://apps.apple.com/app/ultratrain/id6759983118" class="cta-primary">Download on the App Store</a>
-</section>
-
-<footer>
-    <div class="footer-top">
-        <div class="footer-brand">
-            <a href="index.html" class="nav-logo"><img class="glyph" src="assets/app-icon.png" alt=""> UltraTrain</a>
-            <p>The training companion built specifically for ultra trail runners.</p>
-        </div>
-        <div class="footer-cols">
-            <div class="footer-col">
-                <h4>Product</h4>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="https://apps.apple.com/app/ultratrain/id6759983118">Download</a>
-            </div>
-            <div class="footer-col">
-                <h4>Guides</h4>
-                <a href="ultra-trail-training-plan.html">Ultra Trail Training Plan</a>
-                <a href="ultra-marathon-training-plan.html">Ultra Marathon Training Plan</a>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <a href="support.html">Support</a>
-                <a href="mailto:support@ultratrain.app">Contact</a>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+            <div class="ultra-note" style="margin:32px auto 0; max-width:620px">
+                <picture>
+                    <source type="image/webp" srcset="assets/img/ultra/ultra-think-300.webp">
+                    <img src="assets/img/ultra/ultra-think-300.png" width="88" height="88" alt="Ultra thinking" loading="lazy">
+                </picture>
+                <p class="bubble done"><span>Another question? Write to support@ultratrain.app, a human answers.</span></p>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2026 UltraTrain. All rights reserved.
+    </section>
+
+    <!-- 13. Closing CTA -->
+    <section class="section tight" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-panel" data-reveal>
+                <picture>
+                    <source type="image/webp" srcset="assets/img/ultra/ultra-flag-300.webp">
+                    <img class="ultra" src="assets/img/ultra/ultra-flag-300.png" width="150" height="150" alt="Ultra holding a finish flag" loading="lazy">
+                </picture>
+                <h2 id="cta-title">Your next finish line starts today.</h2>
+                <p class="lead">Download UltraTrain, answer Ultra's questions, and find out where you stand.</p>
+                <a class="app-store" href="https://apps.apple.com/app/ultratrain/id6759983118"><img src="assets/img/app-store-badge-en.svg" width="168" height="56" alt="Download on the App Store" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a class="brand" href="/"><img src="assets/app-icon.png" width="30" height="30" alt="">UltraTrain</a>
+                <p>The coach for ultra runners, with a rank that shows your real level. Made for iPhone and Apple Watch, in English and French.</p>
+            </div>
+            <div>
+                <h3 class="footer-h">App</h3>
+                <ul>
+                    <li><a href="https://apps.apple.com/app/ultratrain/id6759983118">Download on the App Store</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="mailto:support@ultratrain.app">support@ultratrain.app</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-h">Guides</h3>
+                <ul>
+                    <li><a href="ultra-trail-training-plan.html">Ultra trail training plan</a></li>
+                    <li><a href="ultra-marathon-training-plan.html">Ultra marathon training plan</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-h">Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="terms.html">Terms of service</a></li>
+                    <li><a href="/fr/" lang="fr" hreflang="fr">Version française</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 UltraTrain. All rights reserved.</span>
+            <span>Apple, the Apple logo, Apple Watch and App Store are trademarks of Apple Inc. Strava is a trademark of Strava, Inc.</span>
+        </div>
     </div>
 </footer>
 
+<script src="assets/site.js" defer></script>
+<script src="assets/rank-calc.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js" integrity="sha384-wl5TeDVvOWt30Pbf8aSo2ZrzsOjddu3avOBvHe+p+OhJt9gP6w9YXmDkN5DK2/dF" crossorigin="anonymous" defer></script>
+<script src="assets/vendor/lenis-1.3.27.min.js" defer></script>
+<script src="assets/home.js" defer></script>
 </body>
 </html>
