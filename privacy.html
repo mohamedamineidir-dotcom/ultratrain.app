@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" sizes="64x64" href="assets/app-icon.png">
     <link rel="apple-touch-icon" href="assets/app-icon-large.png">
     <link rel="canonical" href="https://ultratrain.app/privacy.html">
+    <link rel="alternate" hreflang="en" href="https://ultratrain.app/privacy.html">
+    <link rel="alternate" hreflang="fr" href="https://ultratrain.app/fr/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://ultratrain.app/privacy.html">
     <meta property="og:title" content="Privacy Policy - UltraTrain">
     <meta property="og:description" content="How UltraTrain, the ultra trail and ultra marathon training plan app, collects, uses, and protects your data.">
     <meta property="og:image" content="https://ultratrain.app/assets/og/og-home-en.png">
@@ -40,7 +43,7 @@
         </nav>
         <div class="lang" aria-label="Language">
             <span aria-current="true" lang="en">EN</span>
-            <a href="/fr/" lang="fr" hreflang="fr">FR</a>
+            <a href="/fr/privacy.html" lang="fr" hreflang="fr">FR</a>
         </div>
         <a class="btn btn-primary btn-sm nav-cta" href="https://apps.apple.com/app/ultratrain/id6759983118">Download on the App Store</a>
         <a class="nav-store-icon" href="https://apps.apple.com/app/ultratrain/id6759983118" aria-label="Download on the App Store">
@@ -63,128 +66,152 @@
 <div class="container">
     <a href="/" class="back">&larr; Back to UltraTrain</a>
     <h1>Privacy Policy</h1>
-    <p class="date">Effective date: March 1, 2026</p>
+    <p class="date">Effective date: October 28, 2026</p>
 
-    <p>UltraTrain ("we", "our", or "the app") is a trail running training companion for iOS. We take your privacy seriously. This policy explains what data we collect, how we use it, and your rights.</p>
+    <p>UltraTrain is a training app for ultra trail and ultra marathon runners, on iPhone and Apple Watch. This policy explains what data the app and our server handle, why, who else receives it, how long we keep it and what you can do about it. It covers UltraTrain 2.0 and the earlier 1.x versions (see <a href="#earlier-versions">section 15</a>).</p>
 
-    <h2>1. Data We Collect</h2>
+    <h2 id="who-we-are">1. Who we are</h2>
+    <p>UltraTrain is developed and run by Mohamed-Amine Idir, who is the data controller for the data described here. For any question or request about your data, write to <a href="mailto:support@ultratrain.app">support@ultratrain.app</a>.</p>
 
-    <h3>Data you provide</h3>
+    <h2 id="summary">2. Summary</h2>
     <ul>
-        <li><strong>Account information:</strong> Email address and password when you create an account.</li>
-        <li><strong>Athlete profile:</strong> Experience level, age, weight, resting and max heart rate, running history, and race goals.</li>
-        <li><strong>Race data:</strong> Race names, dates, distances, elevation, checkpoints, and goals you enter.</li>
+        <li>We don't sell your data, we don't show ads and we don't track you across other companies' apps or websites. The app contains no advertising or tracking SDK and never shows the App Tracking Transparency prompt.</li>
+        <li>Your account, athlete profile, races, training plans and runs (including GPS tracks and heart rate) are stored on our server so you can sign in again on another device.</li>
+        <li>Heart rate, weight, sleep, HRV and morning check-ins never go to iCloud. They stay on your device, even when iCloud sync is on.</li>
+        <li>Screenshots you send as ultra proof are checked by OpenAI and are never stored by us.</li>
+        <li>You can delete your account and all its server data from the app at any time.</li>
     </ul>
 
-    <h3>Data collected automatically</h3>
+    <h2 id="data-you-give">3. Data you give us</h2>
     <ul>
-        <li><strong>Health &amp; fitness data (via Apple HealthKit):</strong> Heart rate, workout data, running distance, and calories. We only read data you explicitly grant access to.</li>
-        <li><strong>Location data:</strong> GPS coordinates during active run tracking to record your route, pace, and elevation. Location is only accessed while you are actively tracking a run.</li>
-        <li><strong>Device information:</strong> App version and device model for troubleshooting.</li>
+        <li><strong>Account:</strong> your email address and password (we only store a bcrypt hash of the password), and your first and last name. With Sign in with Apple, we receive an Apple user identifier, your name if you share it and your email or an Apple private relay address. With Google Sign-In, we receive a Google user identifier, your name and your email.</li>
+        <li><strong>Athlete profile:</strong> date of birth, sex, height, weight, resting and maximum heart rate, experience level, weekly volume, longest run, training preferences (days, terrain, strength training, injuries and pain frequency) and, if you add them, your ITRA and UTMB indexes.</li>
+        <li><strong>Answers to Ultra, the coach:</strong> during onboarding you answer questions such as your mission, how you heard about UltraTrain, your ultra experience, your interests, your fears and your dream race. They place you on the rank ladder and shape your plan.</li>
+        <li><strong>Races and results:</strong> race names, dates, distances, elevation, checkpoints and cutoffs, your goals, the results you declare for your rank, and your race reflections (finish time, ranking, DNF).</li>
+        <li><strong>Runs and training:</strong> notes, effort and feeling ratings, gear, saved routes and completed sessions.</li>
+        <li><strong>Emergency contacts:</strong> names and phone numbers you add for run safety. They stay on your device (and in your iCloud if you turn on iCloud sync) and are never sent to our server.</li>
+        <li><strong>Ultra proof (optional):</strong> a screenshot or photo, or a link to an official results page with the name to look for on it. See <a href="#ultra-proof">section 8</a>.</li>
     </ul>
 
-    <h3>Data we do NOT collect</h3>
+    <h2 id="data-from-devices">4. Data from your devices</h2>
     <ul>
-        <li>We do not sell your data to third parties.</li>
-        <li>We do not use your data for advertising.</li>
-        <li>We do not collect data for tracking you across other apps or websites.</li>
+        <li><strong>Apple Health:</strong> with your permission, the app reads heart rate, resting heart rate, heart rate variability (HRV), sleep, body weight, workouts, running, cycling and swimming distances and active energy. It writes your runs to Apple Health as workouts if you turn that on. See <a href="#apple-health">section 7</a>.</li>
+        <li><strong>Location:</strong> precise GPS position while you record a run, including in the background until you stop it. This builds the route, pace, splits and elevation of the run. On the run screen, the app also asks for a single position to show whether GPS is ready; that position stays on your device. If you search for trails near you, your position is sent to OpenStreetMap (see <a href="#providers">section 9</a>).</li>
+        <li><strong>Motion:</strong> cadence and running dynamics during a run, computed on your device.</li>
+        <li><strong>Camera and photos:</strong> only when you take or pick a photo, for example a share card background or an ultra proof. Images you create are saved to your photo library only when you tap Save.</li>
+        <li><strong>Apple Watch:</strong> runs recorded on the watch, with heart rate, are sent to your iPhone over Apple's watch connection.</li>
+        <li><strong>Crash reports:</strong> if the app crashes, it sends a report on the next launch: the error type and message, a stack trace, the device model, iOS version, app version and build, and a random report identifier. Reports contain no account identifier.</li>
+        <li><strong>Anonymous usage events:</strong> a few events about the share overlays (picker opened, template or background chosen, image exported), with the app version, build, platform and language. They contain no account or device identifier, so they can't be linked to you.</li>
+        <li><strong>Notifications:</strong> if you allow notifications, the push token Apple gives your device is stored with your account so we can send them.</li>
     </ul>
 
-    <h2>2. How We Use Your Data</h2>
+    <h2 id="how-we-use">5. How we use your data, and on what legal basis</h2>
     <ul>
-        <li><strong>Training plans:</strong> Your profile, fitness data, and race goals are used to generate personalized training plans.</li>
-        <li><strong>Finish time prediction:</strong> Running history, heart rate, and race course data are used to estimate your race finish times.</li>
-        <li><strong>Nutrition planning:</strong> Weight and race data are used to calculate race-day nutrition recommendations.</li>
-        <li><strong>Progress tracking:</strong> Workout data is used to compute training load, fitness trends, and plan adherence.</li>
-        <li><strong>Sync:</strong> If you enable iCloud sync, your data is synced across your devices via Apple iCloud (CloudKit).</li>
-        <li><strong>Weather forecasts:</strong> Race location coordinates may be sent to a weather service to provide race-day weather estimates. No personal data is included in these requests.</li>
+        <li><strong>To provide the app</strong> (contract): your training plan, finish time predictions, rank, XP and streak, the race screen and fuelling plan, Ultra's messages, sign-in on other devices, your subscription and the emails we must send (verification code and password reset).</li>
+        <li><strong>With your consent</strong>, which you can withdraw at any time in the app or in iOS Settings: Apple Health, location, notifications (weekly summary, training and race reminders), Strava and Google Sign-In.</li>
+        <li><strong>On our legitimate interest</strong>: crash reports and anonymous usage events to fix bugs and improve the app, the image fingerprints that stop the same proof being reused on another account, and the onboarding attributes sent to RevenueCat to understand which runners subscribe. You can object to these by writing to us.</li>
+    </ul>
+    <p>The ultra proof check and the rank are automated, but they only affect your in-app rank. If you disagree with a proof verdict, write to us and a person will look at it.</p>
+
+    <h2 id="storage">6. Where your data is stored</h2>
+    <h3>On your device</h3>
+    <p>All your data lives in the app on your iPhone, protected by iOS Data Protection. Sign-in tokens are kept in the iOS Keychain.</p>
+    <h3>On our server</h3>
+    <p>Our server is hosted by Railway in the United States. When you are signed in, it stores:</p>
+    <ul>
+        <li>your account: email, password hash, names, Apple or Google sign-in identifier, language, referral code, push token, and your web subscription status with its Stripe customer identifier if you subscribed on our website;</li>
+        <li>your athlete profile: date of birth, weight, height, resting and maximum heart rate, experience, weekly volume, longest run, ITRA and UTMB indexes;</li>
+        <li>your runs: date, distance, duration, elevation, pace, splits, notes, the full GPS track and the heart rate recorded at each point, plus average and maximum heart rate;</li>
+        <li>your races, training plans, fitness snapshots, finish time estimates and race fuelling plan;</li>
+        <li>your ultra proof check records and image fingerprints (see <a href="#ultra-proof">section 8</a>);</li>
+        <li>crash reports and anonymous usage events, which are not linked to your account.</li>
+    </ul>
+    <h3>In your iCloud (optional)</h3>
+    <p>iCloud sync is off by default. If you turn it on in Settings, your training data syncs between your devices through your private iCloud database, which only you can access; we can't read it. These health values never go there: heart rate (including the heart rate of your runs), resting and maximum heart rate, weight, sleep, HRV and morning check-ins always stay on your device.</p>
+
+    <h2 id="apple-health">7. Apple Health</h2>
+    <ul>
+        <li>Data from Apple Health is only used to run the app's training features. It is never used for advertising or marketing and never sold.</li>
+        <li>Heart rate and weight are stored on our server with your runs and profile so they come back when you sign in on another device. Heart rate, weight, sleep and HRV are never stored in iCloud. Workouts you import from Apple Health become runs in UltraTrain and, if iCloud sync is on, sync like your other runs, without their heart rate.</li>
+        <li>Data from Apple Health is never shared with third parties, except when you ask the app to upload a run to Strava: the uploaded file then includes that run's heart rate.</li>
+        <li>You can change or revoke access at any time in the Health app or in iOS Settings &gt; Health &gt; Data Access &amp; Devices.</li>
     </ul>
 
-    <h2>3. Apple HealthKit</h2>
-    <p>UltraTrain integrates with Apple HealthKit to read and write workout data. In accordance with Apple's guidelines:</p>
+    <h2 id="ultra-proof">8. Ultra proof: screenshots, photos and results links</h2>
+    <p>Proof is optional. A declared ultra that passes the realism check against your other results unlocks the top tiers without any upload. Each proof check sends your first and last name to our server, together with the name to look for and the result you declared, so we can check that the result is yours.</p>
+    <h3>Screenshot or photo</h3>
     <ul>
-        <li>HealthKit data is never shared with third parties.</li>
-        <li>HealthKit data is never used for advertising or marketing.</li>
-        <li>HealthKit data is never sold.</li>
-        <li>HealthKit data is stored securely on your device and, if you enable sync, in your private iCloud container.</li>
-        <li>You can revoke HealthKit access at any time in the iOS Settings app under Health &gt; Data Access &amp; Devices.</li>
+        <li>The image is processed in our server's memory only. It is never written to disk or to our database, and it is released as soon as the check is done.</li>
+        <li>Our server sends the image to OpenAI, our AI provider, which reads the distance, time and name shown on it. OpenAI may keep API inputs for up to 30 days to monitor abuse, then deletes them, and doesn't use data sent through its API to train its models.</li>
+        <li>We keep only two fingerprints of the image: a perceptual hash (a short code that can't be turned back into the picture) and a SHA-256 hash. They stop the same image being used on another account. We also keep the kind of check, the verdict and its reason codes.</li>
+    </ul>
+    <h3>Results link</h3>
+    <ul>
+        <li>Our server fetches the public page you paste and checks that your name and time appear on it. The results site sees a request from our server, not from your device.</li>
+        <li>We keep only the kind of check, the verdict and its reason codes. We don't keep the link, the name you asked us to look for or a copy of the page.</li>
     </ul>
 
-    <h2>4. Third-Party Services</h2>
+    <h2 id="providers">9. Service providers and other services</h2>
     <ul>
-        <li><strong>Strava (optional):</strong> If you connect your Strava account, completed runs are uploaded to Strava. Strava's own privacy policy applies to data on their platform.</li>
-        <li><strong>Apple iCloud (optional):</strong> If you enable iCloud sync, your data is stored in your private CloudKit container, accessible only to you.</li>
-        <li><strong>Open Food Facts (optional):</strong> If you search for food products, queries are sent to the Open Food Facts public API. No personal data is included.</li>
+        <li><strong>Railway</strong> (United States): hosts our server and database.</li>
+        <li><strong>Resend</strong>: sends our emails (verification code and password reset) from its EU region. It receives your email address and the message.</li>
+        <li><strong>Apple</strong>: Sign in with Apple, push notifications (APNs), iCloud, in-app purchases, Apple Health, and maps. To name the place shown on some share cards, the app sends the highest point of the run's visible route to Apple's geocoding service; it never uses points within 300 m of your start or finish.</li>
+        <li><strong>Google</strong>: only if you choose Google Sign-In. Google confirms your identity and gives us your name, email and Google user identifier.</li>
+        <li><strong>RevenueCat</strong> (United States): manages your App Store subscription. It receives your UltraTrain account user identifier, basic device and app information (such as the iOS and app versions), your purchase history, and three onboarding answers attached to your subscriber record: how you heard about UltraTrain (acquisition source), your mission and the rank tier you were placed in. These are used to understand which runners subscribe, never for advertising or tracking.</li>
+        <li><strong>OpenAI</strong> (United States): reads ultra proof screenshots and photos (<a href="#ultra-proof">section 8</a>).</li>
+        <li><strong>Strava</strong> (optional): if you connect Strava, the app asks for the <code>read</code>, <code>activity:read_all</code> and <code>activity:write</code> permissions. It lists your activities, including private ones, so you can pick runs to import with their GPS track and heart rate, and it uploads the runs you choose (or every run, if you turn on auto-upload) with their GPS track and heart rate. Our server only exchanges and refreshes your Strava sign-in so our Strava secret never ships in the app; your Strava tokens stay in your device's Keychain. Strava's privacy policy applies to data on Strava.</li>
+        <li><strong>OpenStreetMap</strong>: the trail search in the route library sends the trail name you type and the search position (your position, if you search near you) from your device to the public Overpass API (overpass-api.de).</li>
+        <li><strong>Stripe</strong>: only for web checkout on ultratrain.app, never in the app. Our server creates a Stripe customer with your account email, and Stripe collects your payment details; we never see your card number. Stripe tells our server when your web subscription starts or ends.</li>
+        <li><strong>Instagram</strong>: only when you tap "Share to story". The image is handed to the Instagram app on your device; we send nothing to Meta. Instagram's privacy policy applies to what you post.</li>
     </ul>
 
-    <h2>5. Data Storage &amp; Security</h2>
+    <h2 id="what-we-dont-do">10. What we don't do</h2>
     <ul>
-        <li>Your data is stored locally on your device using encrypted storage with iOS Data Protection.</li>
-        <li>Network communications use HTTPS with certificate pinning.</li>
-        <li>Server-side data is stored in encrypted databases.</li>
-        <li>Authentication uses short-lived tokens stored in the iOS Keychain.</li>
-        <li>Biometric authentication (Face ID / Touch ID) can be enabled to protect app access.</li>
+        <li>We don't sell or rent your data.</li>
+        <li>We don't use your data for advertising, and the app has no advertising SDK.</li>
+        <li>We don't track you across other companies' apps or websites, and we don't share your data with data brokers.</li>
     </ul>
 
-    <h2>6. Data Retention &amp; Deletion</h2>
+    <h2 id="retention">11. How long we keep data, and how to delete it</h2>
     <ul>
-        <li>Your data is retained as long as your account is active.</li>
-        <li>You can delete your account and all associated server data at any time from Settings &gt; Account &gt; Delete Account.</li>
-        <li>You can clear all local data from Settings &gt; Data Management &gt; Clear All Data.</li>
-        <li>Upon account deletion, all your data is permanently removed from our servers within 30 days.</li>
+        <li><strong>Server data</strong> is kept while your account exists. Delete Account, in the app's Settings, deletes your account and everything linked to it from our database right away: profile, runs, races, plans, estimates, fitness, fuelling plan, proof records and fingerprints, and push token.</li>
+        <li><strong>Proof images</strong> are never stored by us. OpenAI may keep them up to 30 days (<a href="#ultra-proof">section 8</a>).</li>
+        <li><strong>Crash reports and usage events</strong> can't be linked to you, so we can't find or delete them on request. We keep them only as long as they help us fix and improve the app.</li>
+        <li><strong>Subscription records</strong> are kept by Apple and RevenueCat as required for accounting. Write to us if you want your RevenueCat record deleted.</li>
+        <li><strong>On your device</strong>, Clear All Data in Settings removes everything stored by the app. Deleting the app also removes its local data.</li>
+        <li><strong>In iCloud</strong>, you can delete UltraTrain's data in iOS Settings &gt; your name &gt; iCloud &gt; Manage Storage.</li>
     </ul>
 
-    <h2>7. Children's Privacy</h2>
-    <p>UltraTrain is not intended for children under 13. We do not knowingly collect data from children under 13. If you believe a child has provided us with personal data, please contact us.</p>
-
-    <h2>8. Your Rights</h2>
-    <p>You have the right to:</p>
+    <h2 id="security">12. Security</h2>
     <ul>
-        <li>Access the personal data we hold about you.</li>
-        <li>Request correction of inaccurate data.</li>
-        <li>Request deletion of your data.</li>
-        <li>Export your data (Settings &gt; Data Management &gt; Export).</li>
-        <li>Withdraw consent for HealthKit or location access at any time via iOS Settings.</li>
+        <li>All traffic to our server uses HTTPS with certificate pinning, and requests are signed.</li>
+        <li>Sign-in uses short-lived tokens stored in the iOS Keychain. Passwords are stored only as bcrypt hashes.</li>
+        <li>Data on your device is encrypted with iOS Data Protection, and you can require Face ID or Touch ID to open the app.</li>
     </ul>
 
-    <h2>9. Changes to This Policy</h2>
-    <p>We may update this policy from time to time. We will notify you of significant changes through the app or by updating the effective date above.</p>
+    <h2 id="rights">13. Your rights</h2>
+    <p>Under the GDPR and similar laws, you can:</p>
+    <ul>
+        <li>access the data we hold about you and get a copy of it (Export Training Data in Settings exports your training data; write to us for the rest);</li>
+        <li>correct it (most of it is editable in the app);</li>
+        <li>delete it (Delete Account in Settings);</li>
+        <li>restrict or object to its use, including the uses based on our legitimate interest;</li>
+        <li>withdraw your consent at any time, in iOS Settings or in the app, without affecting what was done before.</li>
+    </ul>
+    <p>Write to <a href="mailto:support@ultratrain.app">support@ultratrain.app</a>; we answer within one month. You can also complain to your data protection authority, in France the CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
+    <p><strong>Transfers outside the EU:</strong> Railway, OpenAI, RevenueCat, Google, Stripe, Strava and Apple process data in the United States. These transfers rely on the safeguards those providers offer, such as the EU Standard Contractual Clauses or the EU-U.S. Data Privacy Framework.</p>
 
-    <h2>10. Contact</h2>
-    <p>If you have questions about this privacy policy, contact us at <a href="mailto:support@ultratrain.app">support@ultratrain.app</a>.</p>
+    <h2 id="children">14. Children</h2>
+    <p>UltraTrain is not meant for children under 13, or under the age of digital consent in your country (15 in France). We don't knowingly collect their data. If you think a child has given us data, write to us and we will delete it.</p>
 
-    
+    <h2 id="earlier-versions">15. Earlier versions (1.x)</h2>
+    <p>In UltraTrain 1.x, food photos you chose to analyze were sent to OpenAI, food search used Open Food Facts, weather used your location, and if you turned on iCloud sync, health values (heart rate, weight, sleep, HRV, check-ins) were stored in your private iCloud. Starting with 2.0, these features are removed and these health values never go to iCloud. When 2.0 starts for the first time, it moves those health values out of iCloud and onto your device. If you had already turned iCloud sync off, you can delete the old copy in iOS Settings &gt; your name &gt; iCloud &gt; Manage Storage.</p>
 
-    <!--
-    ====================================================================================
-    DRAFT 2.0 ADDITIONS, NOT PUBLISHED. REVIEW BEFORE MOVING OUT OF THIS COMMENT.
-    Proposed changes once UltraTrain 2.0 is on the App Store. Also update the effective
-    date, remove "Nutrition planning" from section 2 (the daily nutrition tab is gone;
-    the race fuelling plan in the Race screen only uses weight and race data), remove
-    "Weather forecasts" (feature removed) and "Open Food Facts" (feature removed).
-    ====================================================================================
+    <h2 id="changes">16. Changes to this policy</h2>
+    <p>If we change this policy, we update the effective date at the top. For important changes, we also let you know in the app.</p>
 
-    Section 1, under "Data you provide", add:
-        <li><strong>Rank and declared results:</strong> race results you declare (distance, time, elevation, loops), an optional ITRA or UTMB index, and your answers to Ultra's onboarding questions (mission, experience, fears, training habits).</li>
-        <li><strong>Ultra proof (optional):</strong> to confirm an ultra result you may send a screenshot or photo (a watch or Strava activity, a results page, a finisher certificate), or paste a link to an official results page together with the name to look for on that page.</li>
-
-    Section 2, add:
-        <li><strong>Rank, XP and streak:</strong> your runs, completed sessions, validated rest days, declared results and race finishes are used to compute your level score, rank, XP and daily streak. These stay in the app and in your private iCloud.</li>
-        <li><strong>Subscription analytics:</strong> your onboarding answers (acquisition source, mission, placed tier) are attached to your subscriber record at RevenueCat to understand which runners subscribe. They are not used for advertising or tracking.</li>
-
-    New section after "Apple HealthKit", "3b. Ultra proof: screenshots, photos and results links":
-        <p>When you send a screenshot or photo to confirm an ultra result, our server sends the image to OpenAI (our AI processor) to check that it shows an ultra, that the distance and time match the result you declared, and that the name matches your profile when one is shown. The image is deleted from our server as soon as the check is done. We keep only a perceptual hash of the image (a short fingerprint that cannot be turned back into the picture) and the verdict, so that the same image cannot be reused on another account. The image is never used to train AI models.</p>
-        <p>When you paste a results link, our server fetches that public page and checks that your name and time appear on it. We keep the link, the name you asked us to look for and the verdict. We do not keep a copy of the page.</p>
-        <p>Proof is optional. A declared ultra that passes the realism check against your other results unlocks the top tiers on trust without any upload.</p>
-
-    Section 4 "Third-Party Services", add:
-        <li><strong>RevenueCat (subscriptions):</strong> processes your App Store subscription status so the app knows what you have bought. It receives an anonymous user identifier, your device identifier, your purchase history and the onboarding attributes listed in section 2. RevenueCat's privacy policy applies to that processing.</li>
-        <li><strong>OpenAI (ultra proof check):</strong> receives the screenshot or photo you send for an ultra proof, for the sole purpose of the check described in section 3b, then it is deleted. Data sent to OpenAI's API is not used to train their models.</li>
-
-    Section 6 "Data Retention & Deletion", add:
-        <li>Ultra proof images are deleted right after the check. Their perceptual hash and the verdict are deleted with your account.</li>
-    -->
-
+    <h2 id="contact">17. Contact</h2>
+    <p>Mohamed-Amine Idir, UltraTrain: <a href="mailto:support@ultratrain.app">support@ultratrain.app</a></p>
 </div>
 </main>
 
@@ -215,7 +242,7 @@
                 <ul>
                     <li><a href="privacy.html">Privacy policy</a></li>
                     <li><a href="terms.html">Terms of service</a></li>
-                    
+                    <li><a href="/fr/privacy.html" lang="fr" hreflang="fr">Version française</a></li>
                 </ul>
             </div>
         </div>
